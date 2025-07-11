@@ -602,3 +602,93 @@
 2025-07-11 09:52:30 | INFO     | api:upload_file:88 - 文件上传成功: 514db857-a6e7-4200-8d38-113673a74c23.docx, ID: 6870dedefcd079cdaa2c403e
 2025-07-11 09:52:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
 2025-07-11 09:52:30 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 09:54:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:54:49 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 09:54:53 | INFO     | api:upload_file:53 - 开始处理文件上传: 0710产品日报.pdf
+2025-07-11 09:54:53 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/f868cee9-c2ac-45ce-a834-64735706057f.pdf
+2025-07-11 09:54:53 | INFO     | api:upload_file:88 - 文件上传成功: f868cee9-c2ac-45ce-a834-64735706057f.pdf, ID: 6870df6dfcd079cdaa2c403f
+2025-07-11 09:55:00 | INFO     | api:upload_file:53 - 开始处理文件上传: 0709行业新闻日报.pdf
+2025-07-11 09:55:00 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/1855c4ae-7041-4dc9-88cc-8544ecccbabd.pdf
+2025-07-11 09:55:00 | INFO     | api:upload_file:88 - 文件上传成功: 1855c4ae-7041-4dc9-88cc-8544ecccbabd.pdf, ID: 6870df74fcd079cdaa2c4040
+2025-07-11 09:55:09 | INFO     | api:upload_file:53 - 开始处理文件上传: 0710产品日报.pdf
+2025-07-11 09:55:09 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/9e2cf418-2419-461e-b3ac-06fac01e873a.pdf
+2025-07-11 09:55:09 | INFO     | api:upload_file:88 - 文件上传成功: 9e2cf418-2419-461e-b3ac-06fac01e873a.pdf, ID: 6870df7dfcd079cdaa2c4041
+2025-07-11 09:55:36 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:55:36 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:56:48 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:48 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:56:52 | INFO     | api:delete_file:315 - 删除文件: 6870df7dfcd079cdaa2c4041
+2025-07-11 09:56:52 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/9e2cf418-2419-461e-b3ac-06fac01e873a.pdf
+2025-07-11 09:56:52 | INFO     | api:delete_file:332 - 文件删除成功: 6870df7dfcd079cdaa2c4041
+2025-07-11 09:56:52 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:52 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-11 09:56:52 | INFO     | api:delete_file:315 - 删除文件: 6870df74fcd079cdaa2c4040
+2025-07-11 09:56:52 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/1855c4ae-7041-4dc9-88cc-8544ecccbabd.pdf
+2025-07-11 09:56:52 | INFO     | api:delete_file:332 - 文件删除成功: 6870df74fcd079cdaa2c4040
+2025-07-11 09:56:52 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:52 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 09:56:53 | INFO     | api:delete_file:315 - 删除文件: 6870df6dfcd079cdaa2c403f
+2025-07-11 09:56:53 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/f868cee9-c2ac-45ce-a834-64735706057f.pdf
+2025-07-11 09:56:53 | INFO     | api:delete_file:332 - 文件删除成功: 6870df6dfcd079cdaa2c403f
+2025-07-11 09:56:53 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:53 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 09:56:53 | INFO     | api:delete_file:315 - 删除文件: 6870dedefcd079cdaa2c403e
+2025-07-11 09:56:53 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/514db857-a6e7-4200-8d38-113673a74c23.docx
+2025-07-11 09:56:53 | INFO     | api:delete_file:332 - 文件删除成功: 6870dedefcd079cdaa2c403e
+2025-07-11 09:56:53 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:53 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:56:56 | INFO     | api:upload_file:53 - 开始处理文件上传: 0707行业新闻日报.pdf
+2025-07-11 09:56:56 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/7c72e556-839b-43eb-bc5b-09add9050207.pdf
+2025-07-11 09:56:56 | INFO     | api:upload_file:88 - 文件上传成功: 7c72e556-839b-43eb-bc5b-09add9050207.pdf, ID: 6870dfe8fcd079cdaa2c4042
+2025-07-11 09:56:56 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:56:56 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 09:57:05 | INFO     | api:upload_file:53 - 开始处理文件上传: 0702行业新闻日报.docx
+2025-07-11 09:57:05 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/471c6bf7-57ec-4393-8de1-8cff54474a18.docx
+2025-07-11 09:57:05 | INFO     | api:upload_file:88 - 文件上传成功: 471c6bf7-57ec-4393-8de1-8cff54474a18.docx, ID: 6870dff1fcd079cdaa2c4043
+2025-07-11 09:57:05 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:57:05 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 09:57:07 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870dff1fcd079cdaa2c4043
+2025-07-11 09:57:07 | ERROR    | utils:convert_docx_to_pdf:171 - DOCX转PDF失败: docx2pdf is not implemented for linux as it requires Microsoft Word to be installed
+2025-07-11 09:57:07 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 文件转换失败
+2025-07-11 09:58:09 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870dff1fcd079cdaa2c4043
+2025-07-11 09:58:09 | ERROR    | utils:convert_docx_to_pdf:171 - DOCX转PDF失败: docx2pdf is not implemented for linux as it requires Microsoft Word to be installed
+2025-07-11 09:58:09 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 文件转换失败
+2025-07-11 09:59:08 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:59:08 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:59:08 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:59:09 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:59:09 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:59:09 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:59:09 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:59:09 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 10:01:16 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 10:01:16 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 10:01:16 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 10:01:24 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 10:01:24 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 10:01:24 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 10:01:24 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 10:01:24 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 10:01:24 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 10:01:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 10:01:30 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 10:01:33 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870dff1fcd079cdaa2c4043
+2025-07-11 10:01:35 | INFO     | utils:convert_docx_to_pdf:171 - DOCX转PDF成功: uploads/471c6bf7-57ec-4393-8de1-8cff54474a18.docx -> outputs/8599a9b7-7d11-4eba-ba9b-3e8431a3f504.pdf
+2025-07-11 10:01:35 | INFO     | api:convert_docx_to_pdf_api:174 - DOCX转PDF成功: 471c6bf7-57ec-4393-8de1-8cff54474a18.docx -> 8599a9b7-7d11-4eba-ba9b-3e8431a3f504.pdf
+2025-07-11 10:01:35 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 10:01:35 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-11 10:02:11 | INFO     | api:delete_file:315 - 删除文件: 6870e0fff90d7220b1f396a7
+2025-07-11 10:02:11 | INFO     | utils:cleanup_file:220 - 文件已删除: outputs/8599a9b7-7d11-4eba-ba9b-3e8431a3f504.pdf
+2025-07-11 10:02:11 | INFO     | api:delete_file:332 - 文件删除成功: 6870e0fff90d7220b1f396a7
+2025-07-11 10:02:11 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 10:02:11 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 10:02:12 | INFO     | api:delete_file:315 - 删除文件: 6870dff1fcd079cdaa2c4043
+2025-07-11 10:02:12 | INFO     | utils:cleanup_file:220 - 文件已删除: uploads/471c6bf7-57ec-4393-8de1-8cff54474a18.docx
+2025-07-11 10:02:12 | INFO     | api:delete_file:332 - 文件删除成功: 6870dff1fcd079cdaa2c4043
+2025-07-11 10:02:12 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 10:02:12 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 10:02:13 | INFO     | api:delete_file:315 - 删除文件: 6870dfe8fcd079cdaa2c4042
+2025-07-11 10:02:13 | INFO     | utils:cleanup_file:220 - 文件已删除: uploads/7c72e556-839b-43eb-bc5b-09add9050207.pdf
+2025-07-11 10:02:13 | INFO     | api:delete_file:332 - 文件删除成功: 6870dfe8fcd079cdaa2c4042
+2025-07-11 10:02:13 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 10:02:13 | INFO     | api:get_files:220 - 成功获取 0 个文件

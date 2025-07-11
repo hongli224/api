@@ -11,6 +11,7 @@ from typing import Optional, Tuple
 from fastapi import UploadFile, HTTPException
 from loguru import logger
 from config import settings
+import subprocess
 
 
 def generate_unique_filename(original_filename: str) -> str:
@@ -139,34 +140,36 @@ def get_file_type(filename: str) -> str:
 
 async def convert_docx_to_pdf(docx_file_path: str, output_filename: str) -> str:
     """
-    将DOCX文件转换为PDF
-    
+    使用 LibreOffice 将 DOCX 文件转换为 PDF（Linux 环境）
     Args:
-        docx_file_path: DOCX文件路径
-        output_filename: 输出PDF文件名
-        
+        docx_file_path: DOCX 文件路径
+        output_filename: 输出 PDF 文件名
     Returns:
-        生成的PDF文件路径
-        
+        生成的 PDF 文件路径
     Raises:
         HTTPException: 转换失败时抛出异常
     """
     try:
-        from docx2pdf import convert
-        
-        # 构建输出PDF文件路径
         pdf_file_path = os.path.join(settings.OUTPUT_DIR, output_filename)
-        
-        # 执行转换
-        convert(docx_file_path, pdf_file_path)
-        
+        # 使用libreoffice命令行转换
+        cmd = [
+            "libreoffice",
+            "--headless",
+            "--convert-to", "pdf",
+            "--outdir", settings.OUTPUT_DIR,
+            docx_file_path
+        ]
+        result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        if result.returncode != 0:
+            logger.error(f"LibreOffice转换失败: {result.stderr.decode()}")
+            raise Exception(result.stderr.decode())
+        # LibreOffice会自动用原文件名.pdf输出，重命名为output_filename
+        base_pdf = os.path.splitext(os.path.basename(docx_file_path))[0] + ".pdf"
+        base_pdf_path = os.path.join(settings.OUTPUT_DIR, base_pdf)
+        if base_pdf_path != pdf_file_path:
+            os.rename(base_pdf_path, pdf_file_path)
         logger.info(f"DOCX转PDF成功: {docx_file_path} -> {pdf_file_path}")
         return pdf_file_path
-        
-    except ImportError:
-        logger.error("docx2pdf库未安装")
-        raise HTTPException(status_code=500, detail="PDF转换功能不可用")
-        
     except Exception as e:
         logger.error(f"DOCX转PDF失败: {str(e)}")
         raise HTTPException(status_code=500, detail="文件转换失败")
