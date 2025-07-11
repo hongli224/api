@@ -4,7 +4,7 @@ API路由模块
 """
 
 from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
-from fastapi.responses import JSONResponse
+from fastapi.responses import JSONResponse, FileResponse as FastAPIFileResponse
 from typing import List
 from loguru import logger
 
@@ -270,6 +270,26 @@ async def get_file(file_id: str):
     except Exception as e:
         logger.error(f"获取文件信息失败: {str(e)}")
         raise HTTPException(status_code=500, detail="获取文件信息失败")
+
+
+@router.get("/files/download/{file_id}")
+async def download_file(file_id: str):
+    """
+    文件下载接口
+    根据文件ID下载已上传或已转换的文件
+    """
+    file = await database.get_file_by_id(file_id)
+    if not file:
+        raise HTTPException(status_code=404, detail="文件不存在")
+    # 检查文件是否存在于磁盘
+    import os
+    if not os.path.exists(file.file_path):
+        raise HTTPException(status_code=404, detail="文件在服务器上不存在")
+    return FastAPIFileResponse(
+        path=file.file_path,
+        filename=file.original_filename,
+        media_type="application/octet-stream"
+    )
 
 
 @router.delete("/files/{file_id}")

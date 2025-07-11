@@ -23,8 +23,8 @@ class PyObjectId(ObjectId):
         yield cls.validate
     
     @classmethod
-    def validate(cls, v):
-        """验证ObjectId"""
+    def validate(cls, v, field=None):
+        """验证ObjectId (兼容Pydantic v2)"""
         if not ObjectId.is_valid(v):
             raise ValueError("Invalid ObjectId")
         return ObjectId(v)

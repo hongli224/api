@@ -54,3 +54,217 @@
 2025-07-11 06:22:36 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
 2025-07-11 06:22:36 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
 2025-07-11 06:22:36 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 08:38:45 | INFO     | api:upload_file:53 - 开始处理文件上传: 0702行业新闻日报.docx
+2025-07-11 08:38:45 | INFO     | utils:save_uploaded_file:86 - 文件已保存: uploads/42f25a14-1676-4eb2-8d96-2c8039d48674.docx
+2025-07-11 08:38:45 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 保存文件信息到数据库失败
+2025-07-11 08:44:00 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:44:00 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:46:32 | INFO     | api:upload_file:53 - 开始处理文件上传: 0710产品日报.pdf
+2025-07-11 08:46:32 | INFO     | utils:save_uploaded_file:86 - 文件已保存: uploads/7a20af83-e0eb-4512-b09a-d995f7c161e2.pdf
+2025-07-11 08:46:32 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 保存文件信息到数据库失败
+2025-07-11 08:48:57 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:48:57 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:50:02 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 08:50:02 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 08:50:02 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 08:50:03 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 08:50:03 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 08:50:03 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 08:50:03 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 08:50:03 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 08:50:30 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 08:50:59 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 08:50:59 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 08:50:59 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 08:51:02 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 08:51:02 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 08:51:02 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 08:51:02 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 08:51:02 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 08:51:02 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 08:51:09 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:51:09 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:52:41 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:52:41 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:52:57 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:52:57 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:53:15 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:53:15 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:53:58 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:53:58 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:21 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:21 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:25 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:25 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:29 | INFO     | api:get_files:202 - 获取文件列表: skip=40, limit=10
+2025-07-11 08:55:29 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:29 | INFO     | api:get_files:202 - 获取文件列表: skip=40, limit=10
+2025-07-11 08:55:29 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:32 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:32 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:32 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:32 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:35 | INFO     | api:get_files:202 - 获取文件列表: skip=990, limit=10
+2025-07-11 08:55:35 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:35 | INFO     | api:get_files:202 - 获取文件列表: skip=990, limit=10
+2025-07-11 08:55:35 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:35 | INFO     | api:get_files:202 - 获取文件列表: skip=980, limit=10
+2025-07-11 08:55:35 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:35 | INFO     | api:get_files:202 - 获取文件列表: skip=980, limit=10
+2025-07-11 08:55:35 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 08:55:37 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:37 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:55:37 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:55:37 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:19 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:56:19 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:24 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:24 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:25 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:25 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:28 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:56:28 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:30 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:31 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:31 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:33 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:33 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:34 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:56:34 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:35 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=1000
+2025-07-11 08:56:35 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:37 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 08:56:37 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 08:56:44 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870cd95e0bf9b8e1c93c22d
+2025-07-11 08:56:44 | ERROR    | utils:convert_docx_to_pdf:179 - DOCX转PDF失败: docx2pdf is not implemented for linux as it requires Microsoft Word to be installed
+2025-07-11 08:56:44 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 文件转换失败
+2025-07-11 09:05:01 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:05:01 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:05:01 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:05:02 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:05:02 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:05:02 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:05:02 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:05:02 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:05:42 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:05:42 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:05:42 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:05:43 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:05:43 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:05:43 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:05:43 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:05:43 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:07:38 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:07:38 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:07:38 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:07:39 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:07:39 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:07:39 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:07:39 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:07:39 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:07:55 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:07:55 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:07:55 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:08:14 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 09:08:14 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:08:14 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:08:14 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:08:14 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:08:14 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:10:44 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:10:44 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:10:48 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:10:48 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:11:26 | INFO     | api:upload_file:53 - 开始处理文件上传: 0702行业新闻日报.docx
+2025-07-11 09:11:26 | INFO     | utils:save_uploaded_file:86 - 文件已保存: uploads/4879f82b-5194-4e90-80e7-ed2e09e365ad.docx
+2025-07-11 09:11:26 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 保存文件信息到数据库失败
+2025-07-11 09:12:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:12:47 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:13:05 | INFO     | api:upload_file:53 - 开始处理文件上传: 2020招生简章.docx
+2025-07-11 09:13:05 | INFO     | utils:save_uploaded_file:86 - 文件已保存: uploads/22cf2e0e-fda0-4a33-9fdd-5e1ce307b625.docx
+2025-07-11 09:13:05 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 保存文件信息到数据库失败
+2025-07-11 09:13:50 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:13:50 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:13:50 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:13:51 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:13:51 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:13:51 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:13:51 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:13:51 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:14:03 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:14:03 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:14:03 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:14:17 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 09:14:18 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:14:18 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:14:18 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:14:18 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:14:18 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:14:23 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:14:23 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:15:31 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870d5a13b0b8b18a8346164
+2025-07-11 09:15:31 | ERROR    | utils:convert_docx_to_pdf:179 - DOCX转PDF失败: docx2pdf is not implemented for linux as it requires Microsoft Word to be installed
+2025-07-11 09:15:31 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 文件转换失败
+2025-07-11 09:22:58 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:22:58 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:22:58 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:22:59 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:22:59 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:22:59 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:22:59 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:22:59 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:23:06 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:23:06 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:23:06 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:23:07 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:23:07 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:23:07 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:23:07 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:23:07 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:24:18 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:24:18 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:24:18 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:24:33 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 09:24:33 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:24:33 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:24:33 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:24:33 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:24:33 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:24:42 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:42 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:45 | INFO     | api:delete_file:315 - 删除文件: 6870d5a13b0b8b18a8346164
+2025-07-11 09:24:45 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/22cf2e0e-fda0-4a33-9fdd-5e1ce307b625.docx
+2025-07-11 09:24:45 | INFO     | api:delete_file:331 - 文件删除成功: 6870d5a13b0b8b18a8346164
+2025-07-11 09:24:45 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:45 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:47 | INFO     | api:delete_file:315 - 删除文件: 6870d5a13b0b8b18a8346164
+2025-07-11 09:24:47 | INFO     | api:delete_file:331 - 文件删除成功: 6870d5a13b0b8b18a8346164
+2025-07-11 09:24:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:47 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:48 | INFO     | api:delete_file:315 - 删除文件: 6870d53e3b0b8b18a8346163
+2025-07-11 09:24:48 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/4879f82b-5194-4e90-80e7-ed2e09e365ad.docx
+2025-07-11 09:24:48 | INFO     | api:delete_file:331 - 文件删除成功: 6870d53e3b0b8b18a8346163
+2025-07-11 09:24:48 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:48 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:49 | INFO     | api:delete_file:315 - 删除文件: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:24:49 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/7a20af83-e0eb-4512-b09a-d995f7c161e2.pdf
+2025-07-11 09:24:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:24:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:49 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:49 | INFO     | api:delete_file:315 - 删除文件: 6870cd95e0bf9b8e1c93c22d
+2025-07-11 09:24:49 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/42f25a14-1676-4eb2-8d96-2c8039d48674.docx
+2025-07-11 09:24:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870cd95e0bf9b8e1c93c22d
+2025-07-11 09:24:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:49 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:50 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:24:50 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:24:56 | INFO     | api:upload_file:53 - 开始处理文件上传: 工程师学院简介.docx
+2025-07-11 09:24:56 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/a750cd3b-c88e-4224-82dc-11ad9aba0029.docx
+2025-07-11 09:24:56 | INFO     | api:upload_file:88 - 文件上传成功: a750cd3b-c88e-4224-82dc-11ad9aba0029.docx, ID: 6870d868ef3790452a1addc8
+2025-07-11 09:27:10 | INFO     | api:upload_file:53 - 开始处理文件上传: 各方向复试笔试复习大纲.docx
+2025-07-11 09:27:10 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/71876ad7-66e2-4756-8954-24f96ab29934.docx
+2025-07-11 09:27:10 | INFO     | api:upload_file:88 - 文件上传成功: 71876ad7-66e2-4756-8954-24f96ab29934.docx, ID: 6870d8eeef3790452a1addc9
+2025-07-11 09:28:49 | INFO     | api:upload_file:53 - 开始处理文件上传: 0711产品日报.pdf
+2025-07-11 09:28:49 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/3aaa951c-df36-4603-a396-f59c54b2ef7d.pdf
+2025-07-11 09:28:49 | INFO     | api:upload_file:88 - 文件上传成功: 3aaa951c-df36-4603-a396-f59c54b2ef7d.pdf, ID: 6870d951ef3790452a1addca

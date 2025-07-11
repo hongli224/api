@@ -60,12 +60,12 @@ def validate_file_size(file_size: int) -> bool:
     return file_size <= settings.MAX_FILE_SIZE
 
 
-async def save_uploaded_file(upload_file: UploadFile, filename: str) -> str:
+async def save_uploaded_file(content: bytes, filename: str) -> str:
     """
     保存上传的文件到本地存储
     
     Args:
-        upload_file: 上传的文件对象
+        content: 文件内容（二进制）
         filename: 要保存的文件名
         
     Returns:
@@ -75,17 +75,11 @@ async def save_uploaded_file(upload_file: UploadFile, filename: str) -> str:
         HTTPException: 文件保存失败时抛出异常
     """
     try:
-        # 构建完整的文件路径
         file_path = os.path.join(settings.UPLOAD_DIR, filename)
-        
-        # 异步保存文件
         async with aiofiles.open(file_path, 'wb') as f:
-            content = await upload_file.read()
             await f.write(content)
-        
         logger.info(f"文件已保存: {file_path}")
         return file_path
-        
     except Exception as e:
         logger.error(f"保存文件失败: {str(e)}")
         raise HTTPException(status_code=500, detail="文件保存失败")
@@ -104,17 +98,18 @@ async def validate_and_save_file(upload_file: UploadFile) -> Tuple[str, str, int
     Raises:
         HTTPException: 验证或保存失败时抛出异常
     """
+    # 检查文件名是否存在
+    if not upload_file.filename:
+        raise HTTPException(status_code=400, detail="文件名不能为空")
     # 验证文件扩展名
     if not validate_file_extension(upload_file.filename):
         raise HTTPException(
             status_code=400, 
             detail=f"不支持的文件类型。允许的类型: {', '.join(settings.ALLOWED_EXTENSIONS)}"
         )
-    
     # 读取文件内容以获取大小
     content = await upload_file.read()
     file_size = len(content)
-    
     # 验证文件大小
     if not validate_file_size(file_size):
         max_size_mb = settings.MAX_FILE_SIZE // (1024 * 1024)
@@ -122,13 +117,10 @@ async def validate_and_save_file(upload_file: UploadFile) -> Tuple[str, str, int
             status_code=400,
             detail=f"文件大小超过限制。最大允许: {max_size_mb}MB"
         )
-    
     # 生成唯一文件名
     unique_filename = generate_unique_filename(upload_file.filename)
-    
     # 保存文件
-    file_path = await save_uploaded_file(upload_file, unique_filename)
-    
+    file_path = await save_uploaded_file(content, unique_filename)
     return unique_filename, file_path, file_size
 
 
