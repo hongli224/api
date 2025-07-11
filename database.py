@@ -263,6 +263,24 @@ class Database:
             print(f"❌ 更新文件状态失败: {str(e)}")
             return False
 
+    async def delete_file(self, file_id: str) -> bool:
+        """
+        根据文件ID删除数据库中的文件记录
+        Args:
+            file_id: 文件ID（字符串）
+        Returns:
+            是否删除成功
+        """
+        try:
+            if self.files_collection is None:
+                print("❌ 数据库集合未初始化")
+                return False
+            result = await self.files_collection.delete_one({"_id": ObjectId(file_id)})
+            return result.deleted_count > 0
+        except Exception as e:
+            print(f"❌ 删除文件记录失败: {str(e)}")
+            return False
+
 
 # 创建全局数据库实例
 database = Database() 

@@ -268,3 +268,337 @@
 2025-07-11 09:28:49 | INFO     | api:upload_file:53 - 开始处理文件上传: 0711产品日报.pdf
 2025-07-11 09:28:49 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/3aaa951c-df36-4603-a396-f59c54b2ef7d.pdf
 2025-07-11 09:28:49 | INFO     | api:upload_file:88 - 文件上传成功: 3aaa951c-df36-4603-a396-f59c54b2ef7d.pdf, ID: 6870d951ef3790452a1addca
+2025-07-11 09:33:38 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:33:38 | INFO     | api:get_files:220 - 成功获取 7 个文件
+2025-07-11 09:33:51 | INFO     | api:upload_file:53 - 开始处理文件上传: 0708行业新闻日报.pdf
+2025-07-11 09:33:51 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/47b72af7-6cd6-48c6-83cd-765720c3e1d8.pdf
+2025-07-11 09:33:51 | INFO     | api:upload_file:88 - 文件上传成功: 47b72af7-6cd6-48c6-83cd-765720c3e1d8.pdf, ID: 6870da7fef3790452a1addcb
+2025-07-11 09:37:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:37:47 | INFO     | api:get_files:220 - 成功获取 8 个文件
+2025-07-11 09:37:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:37:49 | INFO     | api:get_files:220 - 成功获取 8 个文件
+2025-07-11 09:37:54 | INFO     | api:upload_file:53 - 开始处理文件上传: 0710产品日报.pdf
+2025-07-11 09:37:54 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/a398b9d3-e5b1-47b5-a371-5b92c574dfba.pdf
+2025-07-11 09:37:54 | INFO     | api:upload_file:88 - 文件上传成功: a398b9d3-e5b1-47b5-a371-5b92c574dfba.pdf, ID: 6870db72ef3790452a1addcc
+2025-07-11 09:38:06 | INFO     | api:upload_file:53 - 开始处理文件上传: 0711产品日报.pdf
+2025-07-11 09:38:06 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/721ab855-1f1e-48b5-acd5-506a8365bde0.pdf
+2025-07-11 09:38:06 | INFO     | api:upload_file:88 - 文件上传成功: 721ab855-1f1e-48b5-acd5-506a8365bde0.pdf, ID: 6870db7eef3790452a1addcd
+2025-07-11 09:39:05 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:05 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:10 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:10 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:24 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:24 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:29 | INFO     | api:upload_file:53 - 开始处理文件上传: 0709行业新闻日报.pdf
+2025-07-11 09:39:29 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/3ae35686-62df-4d1d-88bc-ddba60b3aeee.pdf
+2025-07-11 09:39:29 | INFO     | api:upload_file:88 - 文件上传成功: 3ae35686-62df-4d1d-88bc-ddba60b3aeee.pdf, ID: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:42 | INFO     | api:delete_file:315 - 删除文件: 6870db7eef3790452a1addcd
+2025-07-11 09:39:42 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/721ab855-1f1e-48b5-acd5-506a8365bde0.pdf
+2025-07-11 09:39:42 | INFO     | api:delete_file:331 - 文件删除成功: 6870db7eef3790452a1addcd
+2025-07-11 09:39:42 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:42 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:42 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:42 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/3ae35686-62df-4d1d-88bc-ddba60b3aeee.pdf
+2025-07-11 09:39:42 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:42 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:42 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:43 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:43 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:43 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:43 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:43 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:39:43 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:43 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:44 | INFO     | api:delete_file:315 - 删除文件: 6870db7eef3790452a1addcd
+2025-07-11 09:39:44 | INFO     | api:delete_file:331 - 文件删除成功: 6870db7eef3790452a1addcd
+2025-07-11 09:39:44 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:44 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:45 | INFO     | api:delete_file:315 - 删除文件: 6870db72ef3790452a1addcc
+2025-07-11 09:39:45 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/a398b9d3-e5b1-47b5-a371-5b92c574dfba.pdf
+2025-07-11 09:39:45 | INFO     | api:delete_file:331 - 文件删除成功: 6870db72ef3790452a1addcc
+2025-07-11 09:39:45 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:45 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:45 | INFO     | api:delete_file:315 - 删除文件: 6870da7fef3790452a1addcb
+2025-07-11 09:39:45 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/47b72af7-6cd6-48c6-83cd-765720c3e1d8.pdf
+2025-07-11 09:39:45 | INFO     | api:delete_file:331 - 文件删除成功: 6870da7fef3790452a1addcb
+2025-07-11 09:39:45 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:45 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:46 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:39:46 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/3aaa951c-df36-4603-a396-f59c54b2ef7d.pdf
+2025-07-11 09:39:46 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:39:46 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:46 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:46 | INFO     | api:delete_file:315 - 删除文件: 6870d8eeef3790452a1addc9
+2025-07-11 09:39:46 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/71876ad7-66e2-4756-8954-24f96ab29934.docx
+2025-07-11 09:39:46 | INFO     | api:delete_file:331 - 文件删除成功: 6870d8eeef3790452a1addc9
+2025-07-11 09:39:46 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:46 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:47 | INFO     | api:delete_file:315 - 删除文件: 6870d868ef3790452a1addc8
+2025-07-11 09:39:47 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/a750cd3b-c88e-4224-82dc-11ad9aba0029.docx
+2025-07-11 09:39:47 | INFO     | api:delete_file:331 - 文件删除成功: 6870d868ef3790452a1addc8
+2025-07-11 09:39:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:47 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:47 | INFO     | api:delete_file:315 - 删除文件: 6870d868ef3790452a1addc8
+2025-07-11 09:39:47 | INFO     | api:delete_file:331 - 文件删除成功: 6870d868ef3790452a1addc8
+2025-07-11 09:39:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:47 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:49 | INFO     | api:delete_file:315 - 删除文件: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:39:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:39:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:49 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:39:49 | INFO     | api:delete_file:315 - 删除文件: 6870d53e3b0b8b18a8346163
+2025-07-11 09:39:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870d53e3b0b8b18a8346163
+2025-07-11 09:39:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:39:49 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:42:30 | INFO     | api:upload_file:53 - 开始处理文件上传: 0709行业新闻日报.pdf
+2025-07-11 09:42:30 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/59ddce26-97b0-477f-bf57-1df6a1d87f66.pdf
+2025-07-11 09:42:30 | INFO     | api:upload_file:88 - 文件上传成功: 59ddce26-97b0-477f-bf57-1df6a1d87f66.pdf, ID: 6870dc86ef3790452a1addcf
+2025-07-11 09:42:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:42:30 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:43:07 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:43:07 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:44:02 | INFO     | api:upload_file:53 - 开始处理文件上传: 0711产品日报.pdf
+2025-07-11 09:44:02 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/88c00067-f1f3-4426-b0b5-550e9576f722.pdf
+2025-07-11 09:44:02 | INFO     | api:upload_file:88 - 文件上传成功: 88c00067-f1f3-4426-b0b5-550e9576f722.pdf, ID: 6870dce2ef3790452a1addd0
+2025-07-11 09:44:02 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:44:02 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:44:04 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:44:04 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:44:07 | INFO     | api:upload_file:53 - 开始处理文件上传: 0711产品日报.pdf
+2025-07-11 09:44:07 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/40aea83e-00e7-4303-bcf5-75227e98bfba.pdf
+2025-07-11 09:44:07 | INFO     | api:upload_file:88 - 文件上传成功: 40aea83e-00e7-4303-bcf5-75227e98bfba.pdf, ID: 6870dce7ef3790452a1addd1
+2025-07-11 09:44:07 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:44:07 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:44:10 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:44:10 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/40aea83e-00e7-4303-bcf5-75227e98bfba.pdf
+2025-07-11 09:44:10 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:44:10 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:44:10 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:44:10 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:44:10 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:44:10 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:44:10 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:46:42 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:46:42 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:46:44 | WARNING  | main:http_exception_handler:123 - HTTP异常: 404 - 文件在服务器上不存在
+2025-07-11 09:47:34 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:34 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:47 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:47 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:49 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:49 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:49 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:49 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:49 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:49 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:50 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:50 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:50 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:50 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:50 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:50 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:50 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:50 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:50 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:50 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:51 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:51 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:51 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:51 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:51 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:51 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:51 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:51 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:51 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:51 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:52 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:52 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:47:52 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:52 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:53 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:47:53 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:47:53 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:53 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=30, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=30, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=20, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=20, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=10, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:47:54 | INFO     | api:get_files:202 - 获取文件列表: skip=10, limit=10
+2025-07-11 09:47:54 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:47:56 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:56 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:56 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:56 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:58 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:47:58 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:47:58 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:58 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:59 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:47:59 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:47:59 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:59 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:47:59 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:47:59 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:47:59 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:47:59 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:00 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:48:00 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:48:00 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:00 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:01 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:48:01 | INFO     | api:delete_file:331 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:48:01 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:01 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:03 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:03 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:03 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:03 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:04 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:04 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:04 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:04 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:05 | INFO     | api:delete_file:315 - 删除文件: 6870dce2ef3790452a1addd0
+2025-07-11 09:48:05 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/88c00067-f1f3-4426-b0b5-550e9576f722.pdf
+2025-07-11 09:48:05 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce2ef3790452a1addd0
+2025-07-11 09:48:05 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:05 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:05 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:05 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:05 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:05 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:06 | INFO     | api:delete_file:315 - 删除文件: 6870dce2ef3790452a1addd0
+2025-07-11 09:48:06 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce2ef3790452a1addd0
+2025-07-11 09:48:06 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:06 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:07 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:48:07 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:48:07 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:07 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:30 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:30 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:30 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:31 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:31 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:31 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:31 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:38 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:38 | INFO     | api:delete_file:331 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:48:38 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:38 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:39 | INFO     | api:delete_file:315 - 删除文件: 6870dc86ef3790452a1addcf
+2025-07-11 09:48:39 | INFO     | utils:cleanup_file:217 - 文件已删除: uploads/59ddce26-97b0-477f-bf57-1df6a1d87f66.pdf
+2025-07-11 09:48:39 | INFO     | api:delete_file:331 - 文件删除成功: 6870dc86ef3790452a1addcf
+2025-07-11 09:48:39 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:39 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:40 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:48:40 | INFO     | api:delete_file:331 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:48:40 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:40 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:48:40 | INFO     | api:delete_file:315 - 删除文件: 6870db7eef3790452a1addcd
+2025-07-11 09:48:40 | INFO     | api:delete_file:331 - 文件删除成功: 6870db7eef3790452a1addcd
+2025-07-11 09:48:40 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:48:40 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:50:27 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:50:27 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:50:27 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:50:27 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:50:27 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:50:27 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:50:27 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:50:27 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:50:34 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:50:34 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:50:34 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:50:35 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:50:35 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:50:35 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:50:35 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:50:35 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:51:49 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-11 09:51:49 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-11 09:51:49 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-11 09:51:58 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-11 09:51:58 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-11 09:51:58 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-11 09:51:58 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-11 09:51:58 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-11 09:51:58 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-11 09:52:07 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:07 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:52:11 | INFO     | api:delete_file:315 - 删除文件: 6870dce7ef3790452a1addd1
+2025-07-11 09:52:11 | INFO     | api:delete_file:332 - 文件删除成功: 6870dce7ef3790452a1addd1
+2025-07-11 09:52:11 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:11 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:52:11 | INFO     | api:delete_file:315 - 删除文件: 6870dce2ef3790452a1addd0
+2025-07-11 09:52:11 | INFO     | api:delete_file:332 - 文件删除成功: 6870dce2ef3790452a1addd0
+2025-07-11 09:52:11 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:11 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:52:12 | INFO     | api:delete_file:315 - 删除文件: 6870dc86ef3790452a1addcf
+2025-07-11 09:52:12 | INFO     | api:delete_file:332 - 文件删除成功: 6870dc86ef3790452a1addcf
+2025-07-11 09:52:12 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:12 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:52:12 | INFO     | api:delete_file:315 - 删除文件: 6870dbd1ef3790452a1addce
+2025-07-11 09:52:12 | INFO     | api:delete_file:332 - 文件删除成功: 6870dbd1ef3790452a1addce
+2025-07-11 09:52:12 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:12 | INFO     | api:get_files:220 - 成功获取 10 个文件
+2025-07-11 09:52:13 | INFO     | api:delete_file:315 - 删除文件: 6870db7eef3790452a1addcd
+2025-07-11 09:52:13 | INFO     | api:delete_file:332 - 文件删除成功: 6870db7eef3790452a1addcd
+2025-07-11 09:52:13 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:13 | INFO     | api:get_files:220 - 成功获取 9 个文件
+2025-07-11 09:52:13 | INFO     | api:delete_file:315 - 删除文件: 6870db72ef3790452a1addcc
+2025-07-11 09:52:13 | INFO     | api:delete_file:332 - 文件删除成功: 6870db72ef3790452a1addcc
+2025-07-11 09:52:13 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:13 | INFO     | api:get_files:220 - 成功获取 8 个文件
+2025-07-11 09:52:13 | INFO     | api:delete_file:315 - 删除文件: 6870da7fef3790452a1addcb
+2025-07-11 09:52:13 | INFO     | api:delete_file:332 - 文件删除成功: 6870da7fef3790452a1addcb
+2025-07-11 09:52:13 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:13 | INFO     | api:get_files:220 - 成功获取 7 个文件
+2025-07-11 09:52:14 | INFO     | api:delete_file:315 - 删除文件: 6870d951ef3790452a1addca
+2025-07-11 09:52:14 | INFO     | api:delete_file:332 - 文件删除成功: 6870d951ef3790452a1addca
+2025-07-11 09:52:14 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:14 | INFO     | api:get_files:220 - 成功获取 6 个文件
+2025-07-11 09:52:15 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6870d8eeef3790452a1addc9
+2025-07-11 09:52:15 | WARNING  | main:http_exception_handler:123 - HTTP异常: 404 - 文件在服务器上不存在
+2025-07-11 09:52:17 | INFO     | api:delete_file:315 - 删除文件: 6870d8eeef3790452a1addc9
+2025-07-11 09:52:17 | INFO     | api:delete_file:332 - 文件删除成功: 6870d8eeef3790452a1addc9
+2025-07-11 09:52:17 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:17 | INFO     | api:get_files:220 - 成功获取 5 个文件
+2025-07-11 09:52:17 | INFO     | api:delete_file:315 - 删除文件: 6870d868ef3790452a1addc8
+2025-07-11 09:52:17 | INFO     | api:delete_file:332 - 文件删除成功: 6870d868ef3790452a1addc8
+2025-07-11 09:52:17 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:17 | INFO     | api:get_files:220 - 成功获取 4 个文件
+2025-07-11 09:52:18 | INFO     | api:delete_file:315 - 删除文件: 6870d5a13b0b8b18a8346164
+2025-07-11 09:52:18 | INFO     | api:delete_file:332 - 文件删除成功: 6870d5a13b0b8b18a8346164
+2025-07-11 09:52:18 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:18 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-11 09:52:18 | INFO     | api:delete_file:315 - 删除文件: 6870d53e3b0b8b18a8346163
+2025-07-11 09:52:18 | INFO     | api:delete_file:332 - 文件删除成功: 6870d53e3b0b8b18a8346163
+2025-07-11 09:52:18 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:18 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-11 09:52:19 | INFO     | api:delete_file:315 - 删除文件: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:52:19 | INFO     | api:delete_file:332 - 文件删除成功: 6870cf68e0bf9b8e1c93c22e
+2025-07-11 09:52:19 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:19 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-11 09:52:19 | INFO     | api:delete_file:315 - 删除文件: 6870cd95e0bf9b8e1c93c22d
+2025-07-11 09:52:19 | INFO     | api:delete_file:332 - 文件删除成功: 6870cd95e0bf9b8e1c93c22d
+2025-07-11 09:52:19 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:19 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-11 09:52:30 | INFO     | api:upload_file:53 - 开始处理文件上传: 0702行业新闻日报.docx
+2025-07-11 09:52:30 | INFO     | utils:save_uploaded_file:81 - 文件已保存: uploads/514db857-a6e7-4200-8d38-113673a74c23.docx
+2025-07-11 09:52:30 | INFO     | api:upload_file:88 - 文件上传成功: 514db857-a6e7-4200-8d38-113673a74c23.docx, ID: 6870dedefcd079cdaa2c403e
+2025-07-11 09:52:30 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-11 09:52:30 | INFO     | api:get_files:220 - 成功获取 1 个文件

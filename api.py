@@ -323,10 +323,11 @@ async def delete_file(file_id: str):
         # 删除本地文件
         from utils import cleanup_file
         cleanup_file(file_model.file_path)
-        
+
         # 从数据库中删除记录
-        # 注意：这里需要在Database类中添加delete_file方法
-        # 为了简化，这里只返回成功响应
+        deleted = await database.delete_file(file_id)
+        if not deleted:
+            raise HTTPException(status_code=500, detail="数据库记录删除失败")
         
         logger.info(f"文件删除成功: {file_id}")
         return {"message": "文件删除成功", "file_id": file_id}
