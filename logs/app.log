@@ -692,3 +692,367 @@
 2025-07-11 10:02:13 | INFO     | api:delete_file:332 - 文件删除成功: 6870dfe8fcd079cdaa2c4042
 2025-07-11 10:02:13 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
 2025-07-11 10:02:13 | INFO     | api:get_files:220 - 成功获取 0 个文件
+2025-07-15 08:40:19 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 08:40:19 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 08:40:19 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 08:40:19 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 08:40:19 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 08:40:19 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 08:42:08 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 08:42:08 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-15 08:42:39 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 08:42:39 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-15 08:52:14 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 08:52:14 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-15 08:58:39 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 08:58:39 | INFO     | api:get_files:220 - 成功获取 1 个文件
+2025-07-15 08:58:54 | INFO     | api:upload_file:53 - 开始处理文件上传: 样例2.docx
+2025-07-15 08:58:54 | INFO     | utils:save_uploaded_file:82 - 文件已保存: uploads/b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx
+2025-07-15 08:58:54 | INFO     | api:upload_file:88 - 文件上传成功: b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx, ID: 6876184e7bffafb217d224fb
+2025-07-15 08:58:54 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 08:58:54 | INFO     | api:get_files:220 - 成功获取 2 个文件
+2025-07-15 09:00:51 | INFO     | api:convert_docx_to_pdf_api:120 - 开始处理DOCX转PDF请求: 文件ID 6876184e7bffafb217d224fb
+2025-07-15 09:00:54 | INFO     | utils:convert_docx_to_pdf:171 - DOCX转PDF成功: uploads/b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx -> outputs/dccfc904-5a80-4442-90fd-05a246529f71.pdf
+2025-07-15 09:00:54 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:00:54 | INFO     | api:convert_docx_to_pdf_api:174 - DOCX转PDF成功: b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx -> dccfc904-5a80-4442-90fd-05a246529f71.pdf
+2025-07-15 09:00:54 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-15 09:00:54 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:00:54 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-15 09:24:23 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:24:23 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-15 09:27:11 | INFO     | api:get_files:202 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:27:11 | INFO     | api:get_files:220 - 成功获取 3 个文件
+2025-07-15 09:36:03 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:36:03 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:36:03 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:36:05 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:36:05 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:36:05 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:36:05 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:36:05 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:38:14 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:38:14 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:38:14 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:38:15 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:38:15 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:38:15 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:38:15 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:38:15 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:38:29 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:38:29 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:38:29 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:38:30 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:38:30 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:38:30 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:38:30 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:38:30 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:43:10 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:43:10 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:43:10 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:43:11 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:43:11 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:43:11 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:43:11 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:43:11 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:43:21 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:43:21 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:43:21 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:43:22 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:43:22 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:43:22 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:43:22 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:43:22 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:43:52 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:43:52 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:43:52 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:43:53 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:43:53 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:43:53 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:43:53 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:43:53 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:44:02 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 09:44:02 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 09:44:02 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 09:44:03 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 09:44:03 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 09:44:03 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 09:44:03 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 09:44:03 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 09:48:08 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:48:08 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:48:08 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:48:08 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:50:36 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:50:36 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:50:46 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:50:46 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:50:46 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:50:46 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:50:57 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:50:57 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:52:48 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:52:48 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:52:48 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:52:48 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:53:00 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:53:00 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:57:31 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:57:31 | INFO     | api:get_files:263 - 成功获取 3 个文件
+2025-07-15 09:57:34 | INFO     | api:upload_file:57 - 开始处理文件上传: 0624行业新闻日报.docx
+2025-07-15 09:57:34 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/ec07cc79-d6ce-4843-b01e-0293a7a9c12b.docx
+2025-07-15 09:57:34 | INFO     | api:upload_file:92 - 文件上传成功: ec07cc79-d6ce-4843-b01e-0293a7a9c12b.docx, ID: 6876260ee86d8a02317890cb
+2025-07-15 09:57:35 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:57:35 | INFO     | api:get_files:263 - 成功获取 4 个文件
+2025-07-15 09:57:42 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876260ee86d8a02317890cb
+2025-07-15 09:57:44 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/ec07cc79-d6ce-4843-b01e-0293a7a9c12b.docx -> outputs/f3587f4c-44a7-4d03-bf15-1739fefbff0d.pdf
+2025-07-15 09:57:44 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: ec07cc79-d6ce-4843-b01e-0293a7a9c12b.docx -> f3587f4c-44a7-4d03-bf15-1739fefbff0d.pdf
+2025-07-15 09:57:44 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:57:44 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 09:57:52 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 09:57:52 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:00:51 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:00:51 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:01:01 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:01:01 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:01:01 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:01:01 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:01:02 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:01:02 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:01:41 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:01:41 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:02:41 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:02:41 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:02:41 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:02:57 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 10:02:57 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:02:57 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:02:57 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:02:57 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:02:57 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:03:03 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:03:03 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:03:06 | WARNING  | main:http_exception_handler:123 - HTTP异常: 404 - 文件在服务器上不存在
+2025-07-15 10:03:37 | WARNING  | main:http_exception_handler:123 - HTTP异常: 404 - 文件在服务器上不存在
+2025-07-15 10:03:42 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:03:42 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:03:44 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876184e7bffafb217d224fb
+2025-07-15 10:03:46 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx -> outputs/24e9687b-86b7-4594-984b-950a4352dd4a.pdf
+2025-07-15 10:03:46 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: b691727f-e1a1-4d6d-89b1-ba15516f7e56.docx -> 24e9687b-86b7-4594-984b-950a4352dd4a.pdf
+2025-07-15 10:03:46 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:03:46 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:03:59 | INFO     | api:delete_file:358 - 删除文件: 6874c1c5e54d0caea9ce3610
+2025-07-15 10:03:59 | INFO     | api:delete_file:375 - 文件删除成功: 6874c1c5e54d0caea9ce3610
+2025-07-15 10:03:59 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:03:59 | INFO     | api:get_files:263 - 成功获取 5 个文件
+2025-07-15 10:06:36 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:06:36 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:06:36 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:06:37 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:06:37 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:06:37 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:06:37 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:06:37 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:06:37 | INFO     | api:upload_file:57 - 开始处理文件上传: 样例3.docx
+2025-07-15 10:06:37 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/0b929db3-5029-4577-887f-dcdb5f40b6a4.docx
+2025-07-15 10:06:37 | INFO     | api:upload_file:92 - 文件上传成功: 0b929db3-5029-4577-887f-dcdb5f40b6a4.docx, ID: 6876282d9a7239af028a123f
+2025-07-15 10:06:37 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:06:37 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:06:48 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:06:48 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:07:10 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:07:10 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:07:10 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:07:18 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 10:07:19 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:07:19 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:07:19 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:07:19 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:07:19 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:07:27 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:07:27 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:07:29 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/b73712b6-c205-4dd1-8a1d-e6ba0fcf67d4.docx
+2025-07-15 10:07:29 | ERROR    | utils:call_qwen3:284 - Qwen3 API 调用失败: module 'requests' has no attribute 'post'
+2025-07-15 10:07:29 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 大模型生成失败
+2025-07-15 10:12:11 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:12:11 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:12:11 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:12:13 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:12:13 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:12:13 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:12:13 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:12:13 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:13:35 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876282d9a7239af028a123f
+2025-07-15 10:13:35 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> outputs/359e1808-aee0-4150-a638-e174b0275ae4.pdf
+2025-07-15 10:13:36 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: 0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> 359e1808-aee0-4150-a638-e174b0275ae4.pdf
+2025-07-15 10:13:36 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:13:36 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-15 10:13:38 | INFO     | api:delete_file:358 - 删除文件: 687629cf8f5016c05b749004
+2025-07-15 10:13:38 | INFO     | utils:cleanup_file:226 - 文件已删除: outputs/359e1808-aee0-4150-a638-e174b0275ae4.pdf
+2025-07-15 10:13:38 | INFO     | api:delete_file:375 - 文件删除成功: 687629cf8f5016c05b749004
+2025-07-15 10:13:38 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:13:38 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:13:41 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:13:41 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:15:26 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:15:26 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:15:26 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:15:38 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:15:38 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:15:38 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:15:38 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:15:38 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:17:49 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:17:49 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:17:49 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:17:59 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 10:18:00 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:18:00 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:18:00 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:18:00 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:18:00 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:18:05 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:18:05 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:18:11 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876282d9a7239af028a123f
+2025-07-15 10:18:12 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> outputs/d0e22a20-3ea8-4618-8948-ef0510de153a.pdf
+2025-07-15 10:18:12 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: 0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> d0e22a20-3ea8-4618-8948-ef0510de153a.pdf
+2025-07-15 10:18:12 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:18:12 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-15 10:18:13 | INFO     | api:delete_file:358 - 删除文件: 68762ae4e8cb9f2bd790a51f
+2025-07-15 10:18:13 | INFO     | utils:cleanup_file:226 - 文件已删除: outputs/d0e22a20-3ea8-4618-8948-ef0510de153a.pdf
+2025-07-15 10:18:13 | INFO     | api:delete_file:375 - 文件删除成功: 68762ae4e8cb9f2bd790a51f
+2025-07-15 10:18:13 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:18:13 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:18:14 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/ecce7ea4-1bc6-4515-a429-56b48b814e2d.docx
+2025-07-15 10:19:14 | ERROR    | utils:call_qwen3:284 - Qwen3 API 调用失败: HTTPSConnectionPool(host='api.suanli.cn', port=443): Read timed out. (read timeout=60)
+2025-07-15 10:19:14 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 大模型生成失败
+2025-07-15 10:23:57 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:23:57 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:23:57 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:24:20 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:24:20 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:24:20 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:24:20 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:24:20 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:24:56 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:24:56 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:24:56 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:25:05 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 10:25:06 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:25:06 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:25:06 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:25:06 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:25:06 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:25:17 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:25:17 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:25:34 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876282d9a7239af028a123f
+2025-07-15 10:25:35 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> outputs/2eb23d1c-e991-4aae-9161-957174a585de.pdf
+2025-07-15 10:25:35 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: 0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> 2eb23d1c-e991-4aae-9161-957174a585de.pdf
+2025-07-15 10:25:35 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:25:35 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-15 10:25:36 | INFO     | api:delete_file:358 - 删除文件: 68762c9fcbac1a5e2ddcd95f
+2025-07-15 10:25:36 | INFO     | utils:cleanup_file:226 - 文件已删除: outputs/2eb23d1c-e991-4aae-9161-957174a585de.pdf
+2025-07-15 10:25:36 | INFO     | api:delete_file:375 - 文件删除成功: 68762c9fcbac1a5e2ddcd95f
+2025-07-15 10:25:36 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:25:36 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:25:37 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/8cc6c426-9d15-4ada-85dc-15698f345220.docx
+2025-07-15 10:26:04 | ERROR    | api:convert_to_podcast:224 - 新闻稿转播客失败: 6 validation errors for FileResponse
+id
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+original_filename
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_size
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_type
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+status
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+created_at
+  Field required [type=missing, input_value={'path': 'outputs/b975962...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-15 10:26:04 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 新闻稿转播客失败
+2025-07-15 10:26:08 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/1fa32a1d-9c7c-425c-9b52-82da038a2594.docx
+2025-07-15 10:26:44 | ERROR    | api:convert_to_podcast:224 - 新闻稿转播客失败: 6 validation errors for FileResponse
+id
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+original_filename
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_size
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_type
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+status
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+created_at
+  Field required [type=missing, input_value={'path': 'outputs/9bfcd95...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-15 10:26:44 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 新闻稿转播客失败
+2025-07-15 10:27:48 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:27:48 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:27:48 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:27:49 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:27:49 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:27:49 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:27:49 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:27:49 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:28:00 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-15 10:28:00 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-15 10:28:00 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-15 10:28:07 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-15 10:28:08 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-15 10:28:08 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-15 10:28:08 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-15 10:28:08 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-15 10:28:08 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-15 10:28:13 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:28:13 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:28:17 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/dc8b1e2d-4fc8-4f8a-8d70-32e1d285f573.docx
+2025-07-15 10:28:56 | ERROR    | api:convert_to_podcast:224 - 新闻稿转播客失败: 6 validation errors for FileResponse
+id
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+original_filename
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_size
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_type
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+status
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+created_at
+  Field required [type=missing, input_value={'path': 'outputs/70b20e9...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-15 10:28:56 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 新闻稿转播客失败
+2025-07-15 10:30:05 | INFO     | api:convert_docx_to_pdf_api:124 - 开始处理DOCX转PDF请求: 文件ID 6876282d9a7239af028a123f
+2025-07-15 10:30:06 | INFO     | utils:convert_docx_to_pdf:177 - DOCX转PDF成功: uploads/0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> outputs/e3e477f1-9e97-4f8f-8e5b-7a13dfca08ac.pdf
+2025-07-15 10:30:06 | INFO     | api:convert_docx_to_pdf_api:178 - DOCX转PDF成功: 0b929db3-5029-4577-887f-dcdb5f40b6a4.docx -> e3e477f1-9e97-4f8f-8e5b-7a13dfca08ac.pdf
+2025-07-15 10:30:06 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:30:06 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-15 10:30:07 | INFO     | api:delete_file:358 - 删除文件: 68762dae065a17f7a1979ef9
+2025-07-15 10:30:07 | INFO     | utils:cleanup_file:226 - 文件已删除: outputs/e3e477f1-9e97-4f8f-8e5b-7a13dfca08ac.pdf
+2025-07-15 10:30:07 | INFO     | api:delete_file:375 - 文件删除成功: 68762dae065a17f7a1979ef9
+2025-07-15 10:30:07 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:30:07 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-15 10:30:11 | INFO     | api:upload_file:57 - 开始处理文件上传: 样例3.docx
+2025-07-15 10:30:11 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/b9047fe7-c491-4ff9-a09a-bbdf91144f6a.docx
+2025-07-15 10:30:11 | INFO     | api:upload_file:92 - 文件上传成功: b9047fe7-c491-4ff9-a09a-bbdf91144f6a.docx, ID: 68762db3065a17f7a1979efa
+2025-07-15 10:30:11 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:30:11 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-15 10:30:12 | INFO     | api:delete_file:358 - 删除文件: 68762db3065a17f7a1979efa
+2025-07-15 10:30:12 | INFO     | utils:cleanup_file:226 - 文件已删除: uploads/b9047fe7-c491-4ff9-a09a-bbdf91144f6a.docx
+2025-07-15 10:30:12 | INFO     | api:delete_file:375 - 文件删除成功: 68762db3065a17f7a1979efa
+2025-07-15 10:30:12 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-15 10:30:12 | INFO     | api:get_files:263 - 成功获取 6 个文件

@@ -7,6 +7,7 @@ from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
 from fastapi.responses import JSONResponse, FileResponse as FastAPIFileResponse
 from typing import List
 from loguru import logger
+import os
 
 from database import (
     database, 
@@ -21,7 +22,10 @@ from utils import (
     convert_docx_to_pdf, 
     generate_unique_filename,
     get_file_size,
-    file_exists
+    file_exists,
+    read_docx_text,
+    write_docx_text,
+    call_deepseek
 )
 from config import settings
 
@@ -180,6 +184,45 @@ async def convert_docx_to_pdf_api(request: ConversionRequest):
     except Exception as e:
         logger.error(f"DOCX转PDF失败: {str(e)}")
         raise HTTPException(status_code=500, detail="文件转换失败")
+
+
+@router.post("/files/convert_to_podcast")
+async def convert_to_podcast(file: UploadFile = File(...)):
+    """
+    上传新闻稿 docx，自动转换为播客对话 docx，返回下载链接。
+    """
+    try:
+        # 验证并保存上传文件
+        filename, file_path, file_size = await validate_and_save_file(file)
+        # 读取新闻稿内容
+        news_text = read_docx_text(file_path)
+        # few-shot 示例（可用播客样例1/2内容，实际可优化为读取本地样例文件）
+        podcast_example = (
+            "女生: 哈喽大家好欢迎收听，我们的播客。然后今天呢我们要一起来聊一聊，在二零二五年七月初啊科技领域都有哪些比较新鲜的。值得大家关注的一些动态，嗯比如说有哪些新的技术发布了。有哪些新的产品上线了或者说有哪些我们之前一直在关注的项目，有了一些新的进展。\n"
+            "男生: 听起来就很令人期待，那我们就直接开始吧看看都有什么大霹雳。\n"
+            "女生: 那咱们就开始吧嗯，咱们第一个要聊的呢是这个字节跳动刚刚发布的一个图像合成技术。叫 XVerse 啊，这个东西有什么亮点，未来可能会往哪些方向发展？\n"
+            "男生: 这个技术我觉得还是非常炸的，就是它可以通过文字描述。生成非常高保真的图像，而且它的特别之处在于它可以，通过 DiT 调制。对多个主体进行独立的控制，然后它也支持 Gradio 的互动演示。就是你可以去调一些参数去优化它的生成效果。\n"
+        )
+        # 构造 prompt
+        prompt = f"请将以下新闻稿内容，改写为两位主持人（女生、男生）互相对话的播客文稿，风格参考下方示例。\n【新闻稿内容】\n{news_text}\n【播客样例】\n{podcast_example}"
+        # 调用 DeepSeek 大模型生成播客对话
+        podcast_text = call_deepseek(prompt)
+        # 生成输出 docx 文件名
+        base_name = os.path.splitext(file.filename)[0] if file.filename else "output"
+        output_filename = generate_unique_filename(base_name + '_podcast.docx')
+        output_path = os.path.join(settings.OUTPUT_DIR, output_filename)
+        write_docx_text(podcast_text, output_path)
+        # 返回下载链接（直接返回文件）
+        return FileResponse(
+            path=output_path,
+            filename=output_filename,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+    except HTTPException:
+        raise
+    except Exception as e:
+        logger.error(f"新闻稿转播客失败: {str(e)}")
+        raise HTTPException(status_code=500, detail="新闻稿转播客失败")
 
 
 @router.get("/files", response_model=List[FileResponse])

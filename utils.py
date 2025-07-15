@@ -12,6 +12,12 @@ from fastapi import UploadFile, HTTPException
 from loguru import logger
 from config import settings
 import subprocess
+from docx import Document
+import requests
+
+DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
+DEEPSEEK_API_KEY = "sk-f42549d7d09049009c8bfbc74c341939"
+DEEPSEEK_MODEL = "deepseek-chat"
 
 
 def generate_unique_filename(original_filename: str) -> str:
@@ -223,3 +229,58 @@ def cleanup_file(file_path: str) -> bool:
     except Exception as e:
         logger.error(f"删除文件失败: {str(e)}")
         return False 
+
+
+def read_docx_text(docx_path: str) -> str:
+    """
+    读取 docx 文件的全部文本内容，按段落拼接为字符串。
+    Args:
+        docx_path: docx 文件路径
+    Returns:
+        文件全部文本内容
+    """
+    doc = Document(docx_path)
+    return '\n'.join([para.text for para in doc.paragraphs if para.text.strip()])
+
+
+def write_docx_text(text: str, output_path: str):
+    """
+    将文本内容写入新的 docx 文件，每行为一个段落。
+    Args:
+        text: 要写入的文本内容
+        output_path: 输出 docx 文件路径
+    """
+    doc = Document()
+    for line in text.split('\n'):
+        doc.add_paragraph(line)
+    doc.save(output_path) 
+
+
+def call_deepseek(prompt: str) -> str:
+    """
+    调用 DeepSeek 大模型 API，将 prompt 发送给模型并返回生成内容。
+    Args:
+        prompt: 输入的提示词
+    Returns:
+        生成的文本内容
+    Raises:
+        HTTPException: 调用失败时抛出
+    """
+    headers = {
+        "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    data = {
+        "model": DEEPSEEK_MODEL,
+        "messages": [
+            {"role": "system", "content": "你是播客文案生成助手。"},
+            {"role": "user", "content": prompt}
+        ],
+        "stream": False
+    }
+    try:
+        resp = requests.post(DEEPSEEK_API_URL, headers=headers, json=data, timeout=60)
+        resp.raise_for_status()
+        return resp.json()["choices"][0]["message"]["content"]
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"DeepSeek大模型生成失败: {str(e)}") 
