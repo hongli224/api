@@ -213,7 +213,7 @@ async def convert_to_podcast(file: UploadFile = File(...)):
         output_path = os.path.join(settings.OUTPUT_DIR, output_filename)
         write_docx_text(podcast_text, output_path)
         # 返回下载链接（直接返回文件）
-        return FileResponse(
+        return FastAPIFileResponse(
             path=output_path,
             filename=output_filename,
             media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"

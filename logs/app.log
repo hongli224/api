@@ -1056,3 +1056,60 @@ created_at
 2025-07-15 10:30:12 | INFO     | api:delete_file:375 - 文件删除成功: 68762db3065a17f7a1979efa
 2025-07-15 10:30:12 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
 2025-07-15 10:30:12 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-16 02:02:32 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-16 02:02:32 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-16 02:02:32 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-16 02:02:32 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-16 02:02:32 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-16 02:02:32 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-16 02:06:27 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-16 02:06:27 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-16 02:06:49 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/f332ea1a-b499-4337-b92a-09aae484226e.docx
+2025-07-16 02:07:13 | ERROR    | api:convert_to_podcast:224 - 新闻稿转播客失败: 6 validation errors for FileResponse
+id
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+original_filename
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_size
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+file_type
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+status
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+created_at
+  Field required [type=missing, input_value={'path': 'outputs/875e1ea...dprocessingml.document'}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-07-16 02:07:13 | WARNING  | main:http_exception_handler:123 - HTTP异常: 500 - 新闻稿转播客失败
+2025-07-16 02:11:57 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-16 02:11:57 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-16 02:11:57 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-16 02:11:58 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-16 02:11:58 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-16 02:11:59 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-16 02:11:59 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-16 02:11:59 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-16 02:13:04 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-16 02:13:04 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-16 02:13:04 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-16 02:13:12 | INFO     | __main__:<module>:180 - 启动开发服务器...
+2025-07-16 02:13:13 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-16 02:13:13 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-16 02:13:13 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-16 02:13:13 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-16 02:13:13 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-16 02:13:19 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-16 02:13:19 | INFO     | api:get_files:263 - 成功获取 6 个文件
+2025-07-16 02:13:20 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/8fba684e-de01-4c59-af76-4338a322ba93.docx
+2025-07-16 02:15:26 | INFO     | api:upload_file:57 - 开始处理文件上传: 0715产品新闻日报.docx
+2025-07-16 02:15:26 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/2125ef81-a49b-4302-a882-ea5221414b3a.docx
+2025-07-16 02:15:26 | INFO     | api:upload_file:92 - 文件上传成功: 2125ef81-a49b-4302-a882-ea5221414b3a.docx, ID: 68770b3e727a8bfcb21fca18
+2025-07-16 02:15:26 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-16 02:15:26 | INFO     | api:get_files:263 - 成功获取 7 个文件
+2025-07-16 02:15:31 | INFO     | utils:save_uploaded_file:88 - 文件已保存: uploads/afd73e21-45ba-46dd-845d-196518ed24e7.docx
+2025-07-16 02:19:18 | INFO     | api:get_files:245 - 获取文件列表: skip=0, limit=10
+2025-07-16 02:19:18 | INFO     | api:get_files:263 - 成功获取 7 个文件
