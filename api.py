@@ -164,7 +164,7 @@ async def convert_docx_to_pdf_api(request: ConversionRequest):
             raise HTTPException(status_code=500, detail="保存PDF文件信息到数据库失败")
         
         # 更新原始文件状态
-        await database.update_file_status(request.file_id, "converted")
+        # await database.update_file_status(request.file_id, "converted")
         
         # 构建响应
         response = ConversionResponse(
