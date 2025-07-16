@@ -281,6 +281,21 @@ class Database:
             print(f"❌ 删除文件记录失败: {str(e)}")
             return False
 
+    async def get_files_count(self) -> int:
+        """
+        获取文件总数
+        Returns:
+            文件总数（int）
+        """
+        try:
+            if self.files_collection is None:
+                print("❌ 数据库集合未初始化")
+                return 0
+            return await self.files_collection.count_documents({})
+        except Exception as e:
+            print(f"❌ 获取文件总数失败: {str(e)}")
+            return 0
+
 
 # 创建全局数据库实例
 database = Database() 

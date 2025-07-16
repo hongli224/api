@@ -20,24 +20,18 @@ DEEPSEEK_API_KEY = "sk-f42549d7d09049009c8bfbc74c341939"
 DEEPSEEK_MODEL = "deepseek-chat"
 
 
-def generate_unique_filename(original_filename: str) -> str:
+def generate_unique_filename(prefix: str, original_filename: str) -> str:
     """
-    生成唯一的文件名
-    
+    生成唯一的文件名，格式为 prefix_UUID.扩展名
     Args:
+        prefix: 文件名前缀
         original_filename: 原始文件名
-        
     Returns:
         唯一的文件名
     """
-    # 获取文件扩展名
     file_extension = Path(original_filename).suffix
-    
-    # 生成UUID作为文件名前缀
     unique_id = str(uuid.uuid4())
-    
-    # 组合新的文件名
-    return f"{unique_id}{file_extension}"
+    return f"{prefix}_{unique_id}{file_extension}"
 
 
 def validate_file_extension(filename: str) -> bool:
@@ -125,7 +119,8 @@ async def validate_and_save_file(upload_file: UploadFile) -> Tuple[str, str, int
             detail=f"文件大小超过限制。最大允许: {max_size_mb}MB"
         )
     # 生成唯一文件名
-    unique_filename = generate_unique_filename(upload_file.filename)
+    prefix = os.path.splitext(upload_file.filename)[0] if upload_file.filename else "input"
+    unique_filename = generate_unique_filename(prefix, upload_file.filename)
     # 保存文件
     file_path = await save_uploaded_file(content, unique_filename)
     return unique_filename, file_path, file_size

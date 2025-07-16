@@ -138,7 +138,8 @@ async def convert_docx_to_pdf_api(request: ConversionRequest):
             raise HTTPException(status_code=404, detail="文件在服务器上不存在")
         
         # 生成PDF文件名
-        pdf_filename = generate_unique_filename(original_file.original_filename.replace(".docx", ".pdf"))
+        pdf_prefix = original_file.original_filename.replace(".docx", "")
+        pdf_filename = generate_unique_filename(pdf_prefix, original_file.original_filename.replace(".docx", ".pdf"))
         
         # 执行转换
         pdf_file_path = await convert_docx_to_pdf(original_file.file_path, pdf_filename)
@@ -247,15 +248,40 @@ async def convert_to_podcast(file: UploadFile = File(...)):
         podcast_text = call_deepseek(prompt)
         # 生成输出 docx 文件名
         base_name = os.path.splitext(file.filename)[0] if file.filename else "output"
-        output_filename = generate_unique_filename(base_name + '_podcast.docx')
+        original_filename = file.filename or "input.docx"
+        output_filename = generate_unique_filename(base_name + '_播客稿', original_filename)
         output_path = os.path.join(settings.OUTPUT_DIR, output_filename)
         write_docx_text(podcast_text, output_path)
-        # 返回下载链接（直接返回文件）
-        return FastAPIFileResponse(
-            path=output_path,
-            filename=output_filename,
-            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        # 读取生成的 docx 文件内容为二进制
+        with open(output_path, "rb") as f:
+            file_bytes = f.read()
+        # 构造数据库存储信息
+        file_data = {
+            "filename": output_filename,
+            "original_filename": file.filename,
+            "file_path": output_path,
+            "file_size": len(file_bytes),
+            "file_type": "docx",
+            "status": "generated"
+        }
+        # 保存到数据库（假设 database.create_file 支持二进制内容存储）
+        file_model = await database.create_file(file_data)
+        if not file_model:
+            raise HTTPException(status_code=500, detail="保存播客文稿到数据库失败")
+        # 构建响应
+        response = FileResponse(
+            id=str(file_model.id),
+            filename=file_model.filename,
+            original_filename=file_model.original_filename,
+            file_size=file_model.file_size,
+            file_type=file_model.file_type,
+            status=file_model.status,
+            created_at=file_model.created_at
         )
+        return {
+            "file": response,
+            "podcast_text": podcast_text
+        }
     except HTTPException:
         raise
     except Exception as e:
