@@ -14,6 +14,7 @@ from config import settings
 import subprocess
 from docx import Document
 import requests
+import edge_tts
 
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_API_KEY = "sk-f42549d7d09049009c8bfbc74c341939"
@@ -279,3 +280,15 @@ def call_deepseek(prompt: str) -> str:
         return resp.json()["choices"][0]["message"]["content"]
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"DeepSeek大模型生成失败: {str(e)}") 
+
+
+async def text_to_speech_edge_tts(text: str, output_path: str, voice: str = "zh-CN-XiaoxiaoNeural"):
+    """
+    使用 edge-tts 将文本转换为音频文件（mp3）
+    Args:
+        text: 要转换的文本
+        output_path: 输出音频文件路径
+        voice: 语音名称，默认中文女声
+    """
+    communicate = edge_tts.Communicate(text, voice=voice)
+    await communicate.save(output_path) 

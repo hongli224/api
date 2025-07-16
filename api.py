@@ -8,6 +8,8 @@ from fastapi.responses import JSONResponse, FileResponse as FastAPIFileResponse
 from typing import List
 from loguru import logger
 import os
+import uuid
+from datetime import datetime
 
 from database import (
     database, 
@@ -25,7 +27,8 @@ from utils import (
     file_exists,
     read_docx_text,
     write_docx_text,
-    call_deepseek
+    call_deepseek,
+    text_to_speech_edge_tts
 )
 from config import settings
 
@@ -287,6 +290,69 @@ async def convert_to_podcast(file: UploadFile = File(...)):
     except Exception as e:
         logger.error(f"新闻稿转播客失败: {str(e)}")
         raise HTTPException(status_code=500, detail="新闻稿转播客失败")
+
+
+@router.post("/files/convert_to_audio")
+async def convert_docx_to_audio(file_id: str):
+    """
+    根据 file_id 获取 docx 播客文稿内容，调用 edge-tts 生成音频（mp3），返回下载链接，并写入数据库。
+    """
+    # 1. 获取文件信息
+    file_model = await database.get_file_by_id(file_id)
+    if not file_model:
+        raise HTTPException(status_code=404, detail="文件不存在")
+    if file_model.file_type.lower() != "docx":
+        raise HTTPException(status_code=400, detail="仅支持 docx 文件转音频")
+    if not os.path.exists(file_model.file_path):
+        raise HTTPException(status_code=404, detail="文件在服务器上不存在")
+    # 2. 提取文本
+    text = read_docx_text(file_model.file_path)
+    if not text.strip():
+        raise HTTPException(status_code=400, detail="docx 内容为空")
+    # 3. 生成音频文件名和路径
+    audio_filename = f"{os.path.splitext(file_model.filename)[0]}_{uuid.uuid4().hex}.mp3"
+    audio_path = os.path.join("audio_files", audio_filename)
+    # 4. 调用 edge-tts 生成音频
+    await text_to_speech_edge_tts(text, audio_path)
+    # 5. 写入数据库
+    audio_file_size = os.path.getsize(audio_path)
+    audio_file_data = {
+        "filename": audio_filename,
+        "original_filename": file_model.original_filename.replace('.docx', '.mp3'),
+        "file_path": audio_path,
+        "file_size": audio_file_size,
+        "file_type": "mp3",
+        "status": "converted",
+        "created_at": datetime.utcnow(),
+        "updated_at": datetime.utcnow(),
+        "source_file_id": str(file_model.id)
+    }
+    audio_file_model = await database.create_file(audio_file_data)
+    if not audio_file_model:
+        raise HTTPException(status_code=500, detail="音频文件信息写入数据库失败")
+    # 6. 返回音频文件完整信息
+    return {
+        "audio_file": {
+            "id": str(audio_file_model.id),
+            "filename": audio_file_model.filename,
+            "original_filename": audio_file_model.original_filename,
+            "file_size": audio_file_model.file_size,
+            "file_type": audio_file_model.file_type,
+            "status": audio_file_model.status,
+            "created_at": audio_file_model.created_at,
+            "url": f"/api/files/audio_download/{audio_file_model.filename}"
+        }
+    }
+
+@router.get("/files/audio_download/{filename}")
+def download_audio_file(filename: str):
+    """
+    音频文件下载接口
+    """
+    file_path = os.path.join("audio_files", filename)
+    if not os.path.exists(file_path):
+        raise HTTPException(status_code=404, detail="音频文件不存在")
+    return FastAPIFileResponse(file_path, media_type="audio/mpeg", filename=filename)
 
 
 @router.get("/files")
