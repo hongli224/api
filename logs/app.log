@@ -2171,3 +2171,58 @@ created_at
 2025-07-16 08:55:33 | INFO     | api:get_files:415 - 成功获取 10 个文件
 2025-07-16 08:56:13 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
 2025-07-16 08:56:13 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:08:36 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:08:36 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:08:43 | INFO     | api:upload_file:63 - 开始处理文件上传: 0716产品日报.docx
+2025-07-16 09:08:43 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0716产品日报_b28de0a0-0c7d-4026-a810-aa46dd38b894.docx
+2025-07-16 09:08:43 | INFO     | api:upload_file:98 - 文件上传成功: 0716产品日报_b28de0a0-0c7d-4026-a810-aa46dd38b894.docx, ID: 68776c1b203ddd119d4e3275
+2025-07-16 09:08:43 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:08:43 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:08:48 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0716产品日报_590672e8-5d29-4fa3-99f2-14f4f8072a14.docx
+2025-07-16 09:09:38 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:09:38 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:10:39 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:10:39 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:12:53 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:12:53 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:18:00 | INFO     | api:upload_file:63 - 开始处理文件上传: 0716产品日报.docx
+2025-07-16 09:18:00 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0716产品日报_764b1c3c-53f1-42a0-9759-6e05a8375c14.docx
+2025-07-16 09:18:00 | INFO     | api:upload_file:98 - 文件上传成功: 0716产品日报_764b1c3c-53f1-42a0-9759-6e05a8375c14.docx, ID: 68776e48203ddd119d4e3278
+2025-07-16 09:18:00 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:18:00 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:18:10 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0716产品日报_d62c6fee-1c2a-4715-93f1-9032eefbdc48.docx
+2025-07-16 09:18:51 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:18:51 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:19:40 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:19:40 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:33:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:33:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:39:55 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:39:55 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:44:39 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:44:39 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:53:47 | INFO     | api:upload_file:63 - 开始处理文件上传: 0714产品日报.docx
+2025-07-16 09:53:47 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0714产品日报_0d6f47f0-0b2f-4aba-84f8-fdc876e26a3c.docx
+2025-07-16 09:53:47 | INFO     | api:upload_file:98 - 文件上传成功: 0714产品日报_0d6f47f0-0b2f-4aba-84f8-fdc876e26a3c.docx, ID: 687776ab203ddd119d4e327b
+2025-07-16 09:53:47 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:53:47 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:53:52 | INFO     | api:convert_docx_to_pdf_api:130 - 开始处理DOCX转PDF请求: 文件ID 687776ab203ddd119d4e327b
+2025-07-16 09:53:54 | INFO     | utils:convert_docx_to_pdf:175 - DOCX转PDF成功: uploads/0714产品日报_0d6f47f0-0b2f-4aba-84f8-fdc876e26a3c.docx -> outputs/0714产品日报_62c4eb12-8ba5-4f8f-9527-a35ae6858f3b.pdf
+2025-07-16 09:53:54 | INFO     | api:convert_docx_to_pdf_api:185 - DOCX转PDF成功: 0714产品日报_0d6f47f0-0b2f-4aba-84f8-fdc876e26a3c.docx -> 0714产品日报_62c4eb12-8ba5-4f8f-9527-a35ae6858f3b.pdf
+2025-07-16 09:53:54 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:53:54 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:54:02 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0714产品日报_4fd90abe-c934-4aad-9882-966acbb4335d.docx
+2025-07-16 09:54:32 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:54:32 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:55:15 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:55:15 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 09:57:20 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 09:57:20 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 10:02:17 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 10:02:17 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 10:05:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 10:05:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 10:06:43 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 10:06:43 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-16 10:07:39 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-16 10:07:39 | INFO     | api:get_files:415 - 成功获取 10 个文件
