@@ -15,6 +15,8 @@ import subprocess
 from docx import Document
 import requests
 import edge_tts
+import re
+from pydub import AudioSegment
 
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_API_KEY = "sk-f42549d7d09049009c8bfbc74c341939"
@@ -292,3 +294,43 @@ async def text_to_speech_edge_tts(text: str, output_path: str, voice: str = "zh-
     """
     communicate = edge_tts.Communicate(text, voice=voice)
     await communicate.save(output_path) 
+
+
+def split_dialogue(text: str):
+    """
+    按照“**女生：**”“**男生:**”分段，返回[(角色, 内容), ...]，兼容中英文冒号。
+    """
+    pattern = r"\\*\\*([男女]生)[：:]\\*\\*"
+    segments = []
+    last_pos = 0
+    last_speaker = None
+    for match in re.finditer(pattern, text):
+        if last_speaker is not None:
+            content = text[last_pos:match.start()].strip()
+            if content:
+                segments.append((last_speaker, content))
+        last_speaker = match.group(1)
+        last_pos = match.end()
+    if last_speaker is not None:
+        content = text[last_pos:].strip()
+        if content:
+            segments.append((last_speaker, content))
+    return segments
+
+
+def concat_audios(audio_paths, output_path):
+    """
+    拼接多个 mp3 音频文件为一个
+    """
+    combined = AudioSegment.empty()
+    for path in audio_paths:
+        combined += AudioSegment.from_file(path)
+    combined.export(output_path, format="mp3") 
+
+
+def clean_markdown(text: str) -> str:
+    """
+    去除常见 Markdown 强调符号（如 **、*、__、`）
+    """
+    import re
+    return re.sub(r'\*\*|\*|__|`', '', text) 

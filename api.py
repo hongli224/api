@@ -28,7 +28,10 @@ from utils import (
     read_docx_text,
     write_docx_text,
     call_deepseek,
-    text_to_speech_edge_tts
+    text_to_speech_edge_tts,
+    split_dialogue,
+    concat_audios,
+    clean_markdown
 )
 from config import settings
 
@@ -295,7 +298,7 @@ async def convert_to_podcast(file: UploadFile = File(...)):
 @router.post("/files/convert_to_audio")
 async def convert_docx_to_audio(file_id: str):
     """
-    根据 file_id 获取 docx 播客文稿内容，调用 edge-tts 生成音频（mp3），返回下载链接，并写入数据库。
+    多角色分段配音：解析播客文稿，按“**女生：**”“**男生：**”分段，分别用不同 voice 合成音频，拼接为完整 mp3，写入数据库并返回。
     """
     # 1. 获取文件信息
     file_model = await database.get_file_by_id(file_id)
@@ -309,11 +312,31 @@ async def convert_docx_to_audio(file_id: str):
     text = read_docx_text(file_model.file_path)
     if not text.strip():
         raise HTTPException(status_code=400, detail="docx 内容为空")
-    # 3. 生成音频文件名和路径
-    audio_filename = f"{os.path.splitext(file_model.filename)[0]}_{uuid.uuid4().hex}.mp3"
-    audio_path = os.path.join("audio_files", audio_filename)
-    # 4. 调用 edge-tts 生成音频
-    await text_to_speech_edge_tts(text, audio_path)
+    # 3. 分段解析
+    segments = split_dialogue(text)
+    if not segments:
+        raise HTTPException(status_code=400, detail="未检测到有效的对话分段")
+    ROLE_VOICE = {
+        "女生": "zh-CN-XiaoxiaoNeural",
+        "男生": "zh-CN-YunxiNeural"
+    }
+    temp_audio_paths = []
+    try:
+        for idx, (role, content) in enumerate(segments):
+            voice = ROLE_VOICE.get(role, "zh-CN-XiaoxiaoNeural")
+            clean_content = clean_markdown(content)
+            temp_path = os.path.join("audio_files", f"temp_{file_id}_{idx}.mp3")
+            await text_to_speech_edge_tts(clean_content, temp_path, voice=voice)
+            temp_audio_paths.append(temp_path)
+        # 4. 拼接音频
+        audio_filename = f"{os.path.splitext(file_model.filename)[0]}_{uuid.uuid4().hex}.mp3"
+        audio_path = os.path.join("audio_files", audio_filename)
+        concat_audios(temp_audio_paths, audio_path)
+    finally:
+        # 清理临时分段音频
+        for p in temp_audio_paths:
+            if os.path.exists(p):
+                os.remove(p)
     # 5. 写入数据库
     audio_file_size = os.path.getsize(audio_path)
     audio_file_data = {
