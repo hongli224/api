@@ -289,7 +289,7 @@ async def convert_to_podcast(file: UploadFile = File(...)):
         raise HTTPException(status_code=500, detail="新闻稿转播客失败")
 
 
-@router.get("/files", response_model=List[FileResponse])
+@router.get("/files")
 async def get_files(skip: int = 0, limit: int = 100):
     """
     获取文件列表接口
@@ -309,11 +309,9 @@ async def get_files(skip: int = 0, limit: int = 100):
         logger.info(f"获取文件列表: skip={skip}, limit={limit}")
         
         files = await database.get_files(skip=skip, limit=limit)
-        
-        # 转换为响应格式
-        response_files = []
-        for file_model in files:
-            response_file = FileResponse(
+        total = await database.get_files_count()
+        response_files = [
+            FileResponse(
                 id=str(file_model.id),
                 filename=file_model.filename,
                 original_filename=file_model.original_filename,
@@ -322,10 +320,11 @@ async def get_files(skip: int = 0, limit: int = 100):
                 status=file_model.status,
                 created_at=file_model.created_at
             )
-            response_files.append(response_file)
+            for file_model in files
+        ]
         
         logger.info(f"成功获取 {len(response_files)} 个文件")
-        return response_files
+        return {"total": total, "items": response_files}
         
     except Exception as e:
         logger.error(f"获取文件列表失败: {str(e)}")
