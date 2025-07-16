@@ -86,10 +86,10 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# 配置CORS中间件
+# 配置 CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://cibtoyeqjrhp.sealosbja.site"],  # 只允许前端域名访问
+    allow_origins=["https://cibtoyeqjrhp.sealosbja.site"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
