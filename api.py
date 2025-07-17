@@ -318,7 +318,7 @@ async def convert_docx_to_audio(file_id: str):
         raise HTTPException(status_code=400, detail="未检测到有效的对话分段")
     ROLE_VOICE = {
         "女生": "zh-CN-XiaoxiaoNeural",
-        "男生": "zh-CN-YunxiNeural"
+        "男生": "zh-CN-YunyangNeural"
     }
     temp_audio_paths = []
     try:
