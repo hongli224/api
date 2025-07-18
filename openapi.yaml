@@ -1,0 +1,246 @@
+openapi: 3.0.1
+info:
+  title: 文件转换与播客生成API
+  description: 支持文件上传、DOCX转PDF、新闻稿转播客、TTS配音、文件管理等
+  version: v1
+paths:
+  /api/file_upload:
+    post:
+      summary: 上传文件
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '201':
+          description: 上传成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileResponse'
+  /api/convert_docx_to_pdf:
+    post:
+      summary: DOCX转PDF
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ConversionRequest'
+      responses:
+        '201':
+          description: 转换成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ConversionResponse'
+  /api/files/convert_to_podcast:
+    post:
+      summary: 新闻稿转播客文稿
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: 生成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  file:
+                    $ref: '#/components/schemas/FileResponse'
+                  podcast_text:
+                    type: string
+  /api/files/convert_to_audio:
+    post:
+      summary: 播客文稿转多角色音频
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                file_id:
+                  type: string
+      responses:
+        '200':
+          description: 生成成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  audio_file:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                      filename:
+                        type: string
+                      original_filename:
+                        type: string
+                      file_size:
+                        type: integer
+                      file_type:
+                        type: string
+                      status:
+                        type: string
+                      created_at:
+                        type: string
+                        format: date-time
+                      url:
+                        type: string
+  /api/files/audio_download/{filename}:
+    get:
+      summary: 音频文件下载
+      parameters:
+        - name: filename
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 下载成功
+          content:
+            audio/mpeg:
+              schema:
+                type: string
+                format: binary
+  /api/files:
+    get:
+      summary: 文件分页查询
+      parameters:
+        - name: skip
+          in: query
+          required: false
+          schema:
+            type: integer
+        - name: limit
+          in: query
+          required: false
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: 查询成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/FileResponse'
+  /api/files/{file_id}:
+    get:
+      summary: 获取单个文件信息
+      parameters:
+        - name: file_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 查询成功
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FileResponse'
+    delete:
+      summary: 删除文件
+      parameters:
+        - name: file_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 删除成功
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                  file_id:
+                    type: string
+  /api/files/download/{file_id}:
+    get:
+      summary: 文件下载
+      parameters:
+        - name: file_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: 下载成功
+          content:
+            application/octet-stream:
+              schema:
+                type: string
+                format: binary
+components:
+  schemas:
+    FileResponse:
+      type: object
+      properties:
+        id:
+          type: string
+        filename:
+          type: string
+        original_filename:
+          type: string
+        file_size:
+          type: integer
+        file_type:
+          type: string
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+    ConversionRequest:
+      type: object
+      properties:
+        file_id:
+          type: string
+    ConversionResponse:
+      type: object
+      properties:
+        file_id:
+          type: string
+        pdf_file_id:
+          type: string
+        pdf_filename:
+          type: string
+        pdf_file_path:
+          type: string
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time 

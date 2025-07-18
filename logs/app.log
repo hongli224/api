@@ -2352,3 +2352,244 @@ created_at
 2025-07-17 03:28:56 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
 2025-07-17 03:29:02 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
 2025-07-17 03:29:02 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 03:29:40 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 03:29:40 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 04:58:10 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 04:58:10 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 05:07:29 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 05:07:29 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:25:19 | INFO     | __main__:<module>:186 - 启动开发服务器...
+2025-07-17 06:25:20 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-17 06:25:20 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-17 06:25:20 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-17 06:25:20 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-17 06:25:20 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-17 06:25:24 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:25:24 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:29:44 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:29:44 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:29:47 | INFO     | api:upload_file:63 - 开始处理文件上传: 0717产品日报.docx
+2025-07-17 06:29:47 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx
+2025-07-17 06:29:47 | INFO     | api:upload_file:98 - 文件上传成功: 0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx, ID: 6878985bf74817647e8bc530
+2025-07-17 06:29:47 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:29:47 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:29:52 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_f63920b1-7232-4219-8c32-3e7e6fdd1153.docx
+2025-07-17 06:30:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:30:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:30:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:30:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:30:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:30:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:30:26 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:30:26 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:30:27 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:30:27 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:30:41 | INFO     | api:convert_docx_to_pdf_api:130 - 开始处理DOCX转PDF请求: 文件ID 6878985bf74817647e8bc530
+2025-07-17 06:31:03 | INFO     | utils:convert_docx_to_pdf:175 - DOCX转PDF成功: uploads/0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> outputs/0717产品日报_070db505-8e7a-4c47-bc2d-23037e549441.pdf
+2025-07-17 06:31:03 | INFO     | api:convert_docx_to_pdf_api:185 - DOCX转PDF成功: 0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> 0717产品日报_070db505-8e7a-4c47-bc2d-23037e549441.pdf
+2025-07-17 06:31:03 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:31:03 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:31:39 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:31:39 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:31:50 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:31:50 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:32:54 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:32:54 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:35:13 | INFO     | api:get_files:398 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:35:13 | INFO     | api:get_files:415 - 成功获取 10 个文件
+2025-07-17 06:47:56 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-17 06:47:56 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-17 06:47:56 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-17 06:47:57 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-17 06:47:57 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-17 06:47:57 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-17 06:47:57 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-17 06:47:57 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-17 06:48:05 | INFO     | api:get_files:403 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:48:05 | INFO     | api:get_files:420 - 成功获取 10 个文件
+2025-07-17 06:48:08 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_65b3d1ed-49fa-4d35-a9e0-90ce5e71087d.docx
+2025-07-17 06:48:49 | INFO     | api:convert_docx_to_pdf_api:130 - 开始处理DOCX转PDF请求: 文件ID 6878985bf74817647e8bc530
+2025-07-17 06:49:03 | INFO     | utils:convert_docx_to_pdf:175 - DOCX转PDF成功: uploads/0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> outputs/0717产品日报_eab1082b-6aee-4035-a208-31e9d945f97c.pdf
+2025-07-17 06:49:03 | INFO     | api:get_files:403 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:49:03 | INFO     | api:convert_docx_to_pdf_api:185 - DOCX转PDF成功: 0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> 0717产品日报_eab1082b-6aee-4035-a208-31e9d945f97c.pdf
+2025-07-17 06:49:03 | INFO     | api:get_files:420 - 成功获取 10 个文件
+2025-07-17 06:49:03 | INFO     | api:get_files:403 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:49:03 | INFO     | api:get_files:420 - 成功获取 10 个文件
+2025-07-17 06:50:27 | INFO     | api:get_files:403 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:50:27 | INFO     | api:get_files:420 - 成功获取 10 个文件
+2025-07-17 06:56:47 | INFO     | api:get_files:403 - 获取文件列表: skip=0, limit=10
+2025-07-17 06:56:47 | INFO     | api:get_files:420 - 成功获取 10 个文件
+2025-07-17 07:08:11 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-17 07:08:11 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-17 07:08:11 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-17 07:08:14 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-17 07:08:14 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-17 07:08:14 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-17 07:08:14 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-17 07:08:14 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-17 07:08:21 | INFO     | api:get_files:419 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:08:21 | INFO     | api:get_files:436 - 成功获取 10 个文件
+2025-07-17 07:08:28 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_20de19a6-d9eb-4997-ab94-823e84bb8e93.docx
+2025-07-17 07:09:05 | INFO     | api:get_files:419 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:09:05 | INFO     | api:get_files:436 - 成功获取 10 个文件
+2025-07-17 07:10:32 | INFO     | api:get_files:419 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:10:32 | INFO     | api:get_files:436 - 成功获取 10 个文件
+2025-07-17 07:14:37 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-17 07:14:37 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-17 07:14:37 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-17 07:14:39 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-17 07:14:39 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-17 07:14:39 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-17 07:14:39 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-17 07:14:39 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-17 07:14:43 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:14:43 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:14:49 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_74b9c48a-1ca2-435a-a16d-257bf1ae6a96.docx
+2025-07-17 07:15:30 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:15:30 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:15:41 | ERROR    | main:global_exception_handler:112 - 未处理的异常: [Errno 28] No space left on device
+2025-07-17 07:15:49 | ERROR    | main:global_exception_handler:112 - 未处理的异常: [Errno 28] No space left on device
+2025-07-17 07:16:58 | INFO     | api:delete_file:532 - 删除文件: 6878a1e83d50ffc28013aaf7
+2025-07-17 07:16:59 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0717产品日报_播客稿_1a3c1f24-aa09-41dd-82f5-438d7d1397fd_428d2114ff8b440abc088a2da864526f.mp3
+2025-07-17 07:16:59 | INFO     | api:delete_file:549 - 文件删除成功: 68789d33b814b4d5e09484eb
+2025-07-17 07:16:59 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:16:59 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:00 | INFO     | api:delete_file:532 - 删除文件: 68789cdfb814b4d5e09484ea
+2025-07-17 07:17:00 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/0717产品日报_eab1082b-6aee-4035-a208-31e9d945f97c.pdf
+2025-07-17 07:17:00 | INFO     | api:delete_file:549 - 文件删除成功: 68789cdfb814b4d5e09484ea
+2025-07-17 07:17:00 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:00 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:01 | INFO     | api:delete_file:532 - 删除文件: 68789cd1b814b4d5e09484e9
+2025-07-17 07:17:01 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/0717产品日报_播客稿_1a3c1f24-aa09-41dd-82f5-438d7d1397fd.docx
+2025-07-17 07:17:01 | INFO     | api:delete_file:549 - 文件删除成功: 68789cd1b814b4d5e09484e9
+2025-07-17 07:17:01 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:01 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:01 | INFO     | api:delete_file:532 - 删除文件: 687898d6f74817647e8bc533
+2025-07-17 07:17:01 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0717产品日报_播客稿_f1a3e54c-4adc-4f0d-bab7-6b23c8351aa1_614d17e79eff4e7ebe27bb04f7ee8745.mp3
+2025-07-17 07:17:01 | INFO     | api:delete_file:549 - 文件删除成功: 687898d6f74817647e8bc533
+2025-07-17 07:17:01 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:01 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:02 | INFO     | api:delete_file:532 - 删除文件: 687898a7f74817647e8bc532
+2025-07-17 07:17:02 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/0717产品日报_070db505-8e7a-4c47-bc2d-23037e549441.pdf
+2025-07-17 07:17:02 | INFO     | api:delete_file:549 - 文件删除成功: 687898a7f74817647e8bc532
+2025-07-17 07:17:02 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:02 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:03 | INFO     | api:delete_file:532 - 删除文件: 68789882f74817647e8bc531
+2025-07-17 07:17:03 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/0717产品日报_播客稿_f1a3e54c-4adc-4f0d-bab7-6b23c8351aa1.docx
+2025-07-17 07:17:03 | INFO     | api:delete_file:549 - 文件删除成功: 68789882f74817647e8bc531
+2025-07-17 07:17:03 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:03 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:08 | ERROR    | main:global_exception_handler:112 - 未处理的异常: [Errno 28] No space left on device
+2025-07-17 07:17:45 | INFO     | api:get_files:420 - 获取文件列表: skip=40, limit=10
+2025-07-17 07:17:45 | INFO     | api:get_files:437 - 成功获取 4 个文件
+2025-07-17 07:17:45 | INFO     | api:get_files:420 - 获取文件列表: skip=40, limit=10
+2025-07-17 07:17:45 | INFO     | api:get_files:437 - 成功获取 4 个文件
+2025-07-17 07:17:46 | INFO     | api:get_files:420 - 获取文件列表: skip=10, limit=10
+2025-07-17 07:17:46 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:46 | INFO     | api:get_files:420 - 获取文件列表: skip=10, limit=10
+2025-07-17 07:17:46 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:49 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:49 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:49 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:49 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:50 | INFO     | api:delete_file:532 - 删除文件: 687749228c125692fa56ad8f
+2025-07-17 07:17:50 | INFO     | utils:cleanup_file:224 - 文件已删除: uploads/0714产品日报.mp3_20250716_105629_c1a4a6d8-47cb-45e1-8025-7a974a21787d.docx
+2025-07-17 07:17:50 | INFO     | api:delete_file:549 - 文件删除成功: 687749228c125692fa56ad8f
+2025-07-17 07:17:50 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:50 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:51 | INFO     | api:delete_file:532 - 删除文件: 687723458bbb407ac5bf9512
+2025-07-17 07:17:51 | INFO     | utils:cleanup_file:224 - 文件已删除: uploads/0714产品日报.mp3_20250716_105629_79ea841c-7112-4e8e-afc2-c624b7ad44cd.docx
+2025-07-17 07:17:51 | INFO     | api:delete_file:549 - 文件删除成功: 687723458bbb407ac5bf9512
+2025-07-17 07:17:51 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:51 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:52 | INFO     | api:delete_file:532 - 删除文件: 687723448bbb407ac5bf9511
+2025-07-17 07:17:52 | INFO     | utils:cleanup_file:224 - 文件已删除: uploads/0714产品日报_620daa3b-865e-44cd-9bda-6f469230ac04.docx
+2025-07-17 07:17:52 | INFO     | api:delete_file:549 - 文件删除成功: 687723448bbb407ac5bf9511
+2025-07-17 07:17:52 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:52 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:53 | INFO     | api:delete_file:532 - 删除文件: 687723418bbb407ac5bf9510
+2025-07-17 07:17:53 | INFO     | utils:cleanup_file:224 - 文件已删除: uploads/0702行业新闻日报_c1d7f2b9-931b-45f3-95f7-b626df8120eb.docx
+2025-07-17 07:17:53 | INFO     | api:delete_file:549 - 文件删除成功: 687723418bbb407ac5bf9510
+2025-07-17 07:17:53 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:53 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:53 | INFO     | api:delete_file:532 - 删除文件: 6877233e8bbb407ac5bf950f
+2025-07-17 07:17:53 | INFO     | utils:cleanup_file:224 - 文件已删除: uploads/样例3_3cd84fd6-6729-4b32-b82b-1d10196303b4.docx
+2025-07-17 07:17:53 | INFO     | api:delete_file:549 - 文件删除成功: 6877233e8bbb407ac5bf950f
+2025-07-17 07:17:53 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:53 | INFO     | api:get_files:437 - 成功获取 9 个文件
+2025-07-17 07:17:54 | INFO     | api:delete_file:532 - 删除文件: 68771f71397ceb763c8ec886
+2025-07-17 07:17:54 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/7a6a5230-ccdd-4110-8d3d-ac9406955198.docx
+2025-07-17 07:17:54 | INFO     | api:delete_file:549 - 文件删除成功: 68771f71397ceb763c8ec886
+2025-07-17 07:17:54 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:54 | INFO     | api:get_files:437 - 成功获取 8 个文件
+2025-07-17 07:17:55 | INFO     | api:delete_file:532 - 删除文件: 68771e907ca4c240ce99575d
+2025-07-17 07:17:55 | INFO     | utils:cleanup_file:224 - 文件已删除: outputs/f756f6dd-ac95-413d-9ebb-39587a93b726.pdf
+2025-07-17 07:17:55 | INFO     | api:delete_file:549 - 文件删除成功: 68771e907ca4c240ce99575d
+2025-07-17 07:17:55 | INFO     | api:get_files:420 - 获取文件列表: skip=30, limit=10
+2025-07-17 07:17:55 | INFO     | api:get_files:437 - 成功获取 7 个文件
+2025-07-17 07:17:56 | INFO     | api:get_files:420 - 获取文件列表: skip=10, limit=10
+2025-07-17 07:17:56 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:56 | INFO     | api:get_files:420 - 获取文件列表: skip=10, limit=10
+2025-07-17 07:17:56 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:58 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:58 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:17:58 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:17:58 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:01 | INFO     | api:delete_file:532 - 删除文件: 68786e243bc44b0990d2a11d
+2025-07-17 07:18:01 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0714产品日报_播客稿_84314d18-a31e-427c-93fb-e0504f49a25e_2dd8af56e3354fa09281aec46177f548.mp3
+2025-07-17 07:18:01 | INFO     | api:delete_file:549 - 文件删除成功: 68786e243bc44b0990d2a11d
+2025-07-17 07:18:01 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:18:01 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:02 | INFO     | api:delete_file:532 - 删除文件: 687866e581bdde43e788478d
+2025-07-17 07:18:02 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0714产品日报_播客稿_84314d18-a31e-427c-93fb-e0504f49a25e_ae50202ca5604125aed48bcd8d4d0370.mp3
+2025-07-17 07:18:02 | INFO     | api:delete_file:549 - 文件删除成功: 687866e581bdde43e788478d
+2025-07-17 07:18:03 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:18:03 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:36 | INFO     | api:delete_file:532 - 删除文件: 6878645232d5b3c4255d4ef8
+2025-07-17 07:18:36 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0703行业新闻日报_播客稿_e6d2ff58-1ce5-43de-ad79-d0e8ae694094_aea4ce3ac4d04b0d8040418ee1bc1848.mp3
+2025-07-17 07:18:36 | INFO     | api:delete_file:549 - 文件删除成功: 6878645232d5b3c4255d4ef8
+2025-07-17 07:18:36 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:18:36 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:37 | INFO     | api:delete_file:532 - 删除文件: 687863a1c58d13144118de71
+2025-07-17 07:18:37 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0703行业新闻日报_播客稿_e6d2ff58-1ce5-43de-ad79-d0e8ae694094_7edf8d18947841fea50889d092256d52.mp3
+2025-07-17 07:18:37 | INFO     | api:delete_file:549 - 文件删除成功: 687863a1c58d13144118de71
+2025-07-17 07:18:37 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:18:37 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:38 | INFO     | api:delete_file:532 - 删除文件: 6878625ad7ef53110ff0f87e
+2025-07-17 07:18:38 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0703行业新闻日报_播客稿_e6d2ff58-1ce5-43de-ad79-d0e8ae694094_9f83835797064f59b54ec15a616c8eb6.mp3
+2025-07-17 07:18:38 | INFO     | api:delete_file:549 - 文件删除成功: 6878625ad7ef53110ff0f87e
+2025-07-17 07:18:38 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:18:38 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:18:59 | INFO     | api:convert_docx_to_pdf_api:130 - 开始处理DOCX转PDF请求: 文件ID 6878985bf74817647e8bc530
+2025-07-17 07:19:15 | INFO     | utils:convert_docx_to_pdf:175 - DOCX转PDF成功: uploads/0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> outputs/0717产品日报_c5f664d2-0002-4586-8ab7-3181b557eaf5.pdf
+2025-07-17 07:19:15 | INFO     | api:convert_docx_to_pdf_api:185 - DOCX转PDF成功: 0717产品日报_9f68ed94-0cbd-42ba-ad79-0f5dba301958.docx -> 0717产品日报_c5f664d2-0002-4586-8ab7-3181b557eaf5.pdf
+2025-07-17 07:19:15 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:19:15 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:19:44 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:19:44 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:19:59 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0717产品日报_02148d89-f55d-4f2a-8a38-d3bdd0eb6b51.docx
+2025-07-17 07:20:38 | INFO     | api:delete_file:532 - 删除文件: 6878a410be94dd36d9263e41
+2025-07-17 07:20:38 | INFO     | utils:cleanup_file:224 - 文件已删除: audio_files/0717产品日报_播客稿_cd7a382e-69ce-4c35-b8e6-507a74ee5250_2e14a3669152432e8be11bf9e21ba461.mp3
+2025-07-17 07:20:38 | INFO     | api:delete_file:549 - 文件删除成功: 6878a410be94dd36d9263e41
+2025-07-17 07:20:38 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:20:38 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:20:38 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:20:38 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:21:56 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:21:56 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:23:09 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:23:09 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 07:27:59 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 07:27:59 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-17 08:02:54 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-17 08:02:54 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 01:56:58 | INFO     | __main__:<module>:186 - 启动开发服务器...
+2025-07-18 01:57:02 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-18 01:57:02 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-18 01:57:02 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-18 01:57:02 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-18 01:57:02 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-18 01:57:07 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 01:57:07 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 02:08:02 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 02:08:02 | INFO     | api:get_files:437 - 成功获取 10 个文件
