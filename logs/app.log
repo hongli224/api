@@ -2593,3 +2593,49 @@ created_at
 2025-07-18 01:57:07 | INFO     | api:get_files:437 - 成功获取 10 个文件
 2025-07-18 02:08:02 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
 2025-07-18 02:08:02 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 03:18:21 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 03:18:21 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 03:22:35 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 03:22:35 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 04:11:24 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-07-18 04:11:24 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-07-18 04:11:24 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-07-18 04:14:44 | INFO     | __main__:<module>:186 - 启动开发服务器...
+2025-07-18 04:14:45 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-07-18 04:14:45 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-07-18 04:14:45 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-07-18 04:14:45 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-07-18 04:14:45 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-07-18 04:42:31 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 04:42:31 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 05:18:38 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 05:18:38 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 05:45:17 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 05:45:17 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 06:17:58 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 06:17:58 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 06:33:15 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 06:33:15 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:21:52 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:21:52 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:33:47 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:33:47 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:40:34 | INFO     | api:upload_file:63 - 开始处理文件上传: 0718产品日报.docx
+2025-07-18 07:40:34 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0718产品日报_6b71ffd0-1233-433c-aeab-21c5dcd37874.docx
+2025-07-18 07:40:34 | INFO     | api:upload_file:98 - 文件上传成功: 0718产品日报_6b71ffd0-1233-433c-aeab-21c5dcd37874.docx, ID: 6879fa72fd35f6b5d1a32529
+2025-07-18 07:40:34 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:40:34 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:40:37 | INFO     | api:convert_docx_to_pdf_api:130 - 开始处理DOCX转PDF请求: 文件ID 6879fa72fd35f6b5d1a32529
+2025-07-18 07:40:40 | INFO     | utils:convert_docx_to_pdf:175 - DOCX转PDF成功: uploads/0718产品日报_6b71ffd0-1233-433c-aeab-21c5dcd37874.docx -> outputs/0718产品日报_d7cabb60-31ae-49be-adba-6bcd852fb71d.pdf
+2025-07-18 07:40:40 | INFO     | api:convert_docx_to_pdf_api:185 - DOCX转PDF成功: 0718产品日报_6b71ffd0-1233-433c-aeab-21c5dcd37874.docx -> 0718产品日报_d7cabb60-31ae-49be-adba-6bcd852fb71d.pdf
+2025-07-18 07:40:40 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:40:40 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:40:43 | INFO     | utils:save_uploaded_file:85 - 文件已保存: uploads/0718产品日报_53acb442-edce-4a31-bf50-eeec3cbb037c.docx
+2025-07-18 07:41:27 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:41:27 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 07:42:29 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 07:42:29 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 08:05:20 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 08:05:20 | INFO     | api:get_files:437 - 成功获取 10 个文件
+2025-07-18 08:20:45 | INFO     | api:get_files:420 - 获取文件列表: skip=0, limit=10
+2025-07-18 08:20:45 | INFO     | api:get_files:437 - 成功获取 10 个文件
