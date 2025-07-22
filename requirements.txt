@@ -35,3 +35,4 @@ pdfplumber
 requests 
 edge-tts 
 pydub 
+hanziconv 

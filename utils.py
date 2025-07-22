@@ -346,9 +346,31 @@ def split_daily_report_by_date(text: str):
     按日期分割日报内容，返回 [(date, content), ...]
     支持 2024-05-01、2024年5月1日、05月01日、2024/05/01 等格式
     """
-    # 匹配多种日期格式
-    pattern = r"((?:20\\d{2}[年\-/.])?\\d{1,2}[月\-/.]\\d{1,2}[日号]?)"
-    matches = list(re.finditer(pattern, text))
+    # 先输出前200字符看看格式
+    logger.info(f"文本前200字符: {text[:200]}")
+    
+    # 匹配多种日期格式，包括 YYYY.M.D 格式
+    patterns = [
+        r"(\d{4}\.\d{1,2}\.\d{1,2}(?:[（(][^）)]*[）)])?)",  # 2025.7.14 或 2025.7.14（一）
+        r"(\d{4}年\d{1,2}月\d{1,2}日)",      # 2024年5月1日
+        r"(\d{1,2}月\d{1,2}日)",              # 5月1日
+        r"(\d{4}-\d{1,2}-\d{1,2})",          # 2024-05-01
+        r"(\d{4}/\d{1,2}/\d{1,2})",          # 2024/05/01
+        r"(\d{1,2}/\d{1,2})",                # 05/01
+        r"(\d{1,2}-\d{1,2})",                # 05-01
+    ]
+    
+    matches = []
+    for i, pattern in enumerate(patterns):
+        pattern_matches = list(re.finditer(pattern, text))
+        if pattern_matches:
+            matches.extend(pattern_matches)
+            logger.info(f"模式 {i+1} 找到 {len(pattern_matches)} 个匹配: {[m.group(1) for m in pattern_matches[:3]]}")
+    
+    # 按位置排序
+    matches.sort(key=lambda x: x.start())
+    logger.info(f"总共找到 {len(matches)} 个日期匹配: {[m.group(1) for m in matches[:5]]}")
+    
     results = []
     for i, match in enumerate(matches):
         date_str = match.group(1)
@@ -359,21 +381,32 @@ def split_daily_report_by_date(text: str):
         date = normalize_date(date_str)
         if content:
             results.append((date, content))
+            logger.info(f"添加日期段落: {date} (内容长度: {len(content)})")
     return results
 
 def normalize_date(date_str: str) -> str:
     """
     尝试多种格式转为 yyyy-mm-dd
     """
+    # 移除中文括号和星期
+    date_str = re.sub(r'（[一二三四五六日]）', '', date_str)
+    
+    # 处理 YYYY.M.D 格式
+    if re.match(r"^\\d{4}\\.\\d{1,2}\\.\\d{1,2}$", date_str):
+        date_str = date_str.replace('.', '-')
+    
     date_str = date_str.replace('年', '-').replace('月', '-').replace('日', '').replace('号', '')
-    date_str = date_str.replace('/', '-').replace('.', '-')
+    date_str = date_str.replace('/', '-')
+    
     # 处理无年份情况，补今年
     if re.match(r"^\\d{1,2}-\\d{1,2}$", date_str):
         date_str = f"{datetime.now().year}-{date_str}"
+    
     try:
         dt = datetime.strptime(date_str, "%Y-%m-%d")
         return dt.strftime("%Y-%m-%d")
     except:
+        logger.warning(f"无法解析日期格式: {date_str}")
         return date_str  # 原样返回
 
 def summarize_content_with_deepseek(date, content):
@@ -387,9 +420,44 @@ def summarize_content_with_deepseek(date, content):
 
 def generate_wordcloud(text: str, output_path: str):
     """
-    生成中文词云图片
+    生成中文词云图片，使用哈工大停用词库，只显示名词
     """
-    words = " ".join(jieba.cut(text))
-    wc = WordCloud(font_path="msyh.ttc", width=800, height=400, background_color="white")
-    wc.generate(words)
+    # 文本预处理：过滤无效字符
+    import re
+    # 移除数字、特殊符号、URL等
+    text = re.sub(r'\d+', '', text)  # 移除数字
+    text = re.sub(r'https?://\S+', '', text)  # 移除URL
+    text = re.sub(r'[^\u4e00-\u9fa5a-zA-Z\s]', '', text)  # 只保留中文、英文、空格
+    
+    # 加载哈工大停用词库
+    stopwords = set()
+    try:
+        with open('hit_stopwords.txt', 'r', encoding='utf-8') as f:
+            stopwords = set(line.strip() for line in f)
+    except FileNotFoundError:
+        # 如果文件不存在，使用基本停用词
+        stopwords = {'的', '了', '在', '是', '我', '有', '和', '就', '不', '人', '都', '一', '一个', '上', '也', '很', '到', '说', '要', '去', '你', '会', '着', '没有', '看', '好', '自己', '这'}
+    
+    # 使用jieba进行分词和词性标注，只保留名词
+    import jieba.posseg as pseg
+    words = []
+    for word, flag in pseg.cut(text):
+        # 只保留名词 (n开头) 且不在停用词中的词
+        if flag.startswith('n') and word not in stopwords and len(word) > 1:
+            words.append(word)
+    
+    # 如果没有有效词汇，使用所有词汇
+    if not words:
+        words = [word for word in jieba.cut(text) if word not in stopwords and len(word) > 1]
+    
+    words_text = " ".join(words)
+    
+    # 使用中文字体
+    wc = WordCloud(
+        font_path="/usr/share/fonts/truetype/wqy/wqy-microhei.ttc",
+        width=800, 
+        height=400, 
+        background_color="white"
+    )
+    wc.generate(words_text)
     wc.to_file(output_path) 

@@ -463,10 +463,26 @@ async def analyze_daily_report_timeline_batch(file_ids: List[str] = Body(...)):
         if not f or getattr(f, 'file_type', '').lower() != 'docx':
             raise HTTPException(400, f"文件不存在或类型错误: {fid}")
     from utils import read_docx_text
+    import os
     all_text = ""
+    valid_files = []
     for f in files:
+        # 检查文件是否存在
+        if not os.path.exists(f.file_path):
+            # 文件不存在，删除数据库记录
+            await database.delete_file(str(f.id))
+            logger.warning(f"文件不存在，已删除数据库记录: {f.original_filename}")
+            continue
+        valid_files.append(f)
         all_text += read_docx_text(f.file_path) + "\n"
+    
+    # 检查是否还有有效文件
+    if not valid_files:
+        raise HTTPException(400, "所有选择的文件都不存在")
+    
+    logger.info(f"处理 {len(valid_files)} 个有效文件，总文本长度: {len(all_text)}")
     date_contents = split_daily_report_by_date(all_text)
+    logger.info(f"检测到 {len(date_contents)} 个日期段落")
     timeline = []
     for date, content in date_contents:
         summary = summarize_content_with_deepseek(date, content)
@@ -484,9 +500,22 @@ async def analyze_daily_report_cloudmap_batch(file_ids: List[str] = Body(...)):
         if not f or getattr(f, 'file_type', '').lower() != 'docx':
             raise HTTPException(400, f"文件不存在或类型错误: {fid}")
     from utils import read_docx_text
+    import os
     all_text = ""
+    valid_files = []
     for f in files:
+        # 检查文件是否存在
+        if not os.path.exists(f.file_path):
+            # 文件不存在，删除数据库记录
+            await database.delete_file(str(f.id))
+            logger.warning(f"文件不存在，已删除数据库记录: {f.original_filename}")
+            continue
+        valid_files.append(f)
         all_text += read_docx_text(f.file_path) + "\n"
+    
+    # 检查是否还有有效文件
+    if not valid_files:
+        raise HTTPException(400, "所有选择的文件都不存在")
     import os
     import uuid
     from config import settings
