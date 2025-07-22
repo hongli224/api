@@ -296,6 +296,14 @@ class Database:
             print(f"❌ 获取文件总数失败: {str(e)}")
             return 0
 
+    async def get_files_by_filter(self, filter_dict):
+        """
+        按条件筛选文件列表
+        """
+        if self.files_collection is None:
+            return []
+        return await self.files_collection.find(filter_dict).to_list(length=1000)
+
 
 # 创建全局数据库实例
 database = Database() 

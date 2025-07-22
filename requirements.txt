@@ -9,6 +9,7 @@ motor==3.7.1
 
 # Pydantic - 数据验证和序列化
 pydantic>=2.7.0
+pydantic-settings
 
 # Python-multipart - 处理文件上传
 python-multipart==0.0.6
@@ -27,3 +28,10 @@ python-dotenv==1.0.0
 
 # loguru - 现代化的日志记录
 loguru==0.7.2 
+wordcloud
+jieba
+matplotlib
+pdfplumber 
+requests 
+edge-tts 
+pydub 

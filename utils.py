@@ -17,6 +17,11 @@ import requests
 import edge_tts
 import re
 from pydub import AudioSegment
+import jieba
+from wordcloud import WordCloud
+import matplotlib.pyplot as plt
+import re
+from datetime import datetime
 
 DEEPSEEK_API_URL = "https://api.deepseek.com/chat/completions"
 DEEPSEEK_API_KEY = "sk-f42549d7d09049009c8bfbc74c341939"
@@ -334,3 +339,57 @@ def clean_markdown(text: str) -> str:
     """
     import re
     return re.sub(r'\*\*|\*|__|`', '', text) 
+
+
+def split_daily_report_by_date(text: str):
+    """
+    按日期分割日报内容，返回 [(date, content), ...]
+    支持 2024-05-01、2024年5月1日、05月01日、2024/05/01 等格式
+    """
+    # 匹配多种日期格式
+    pattern = r"((?:20\\d{2}[年\-/.])?\\d{1,2}[月\-/.]\\d{1,2}[日号]?)"
+    matches = list(re.finditer(pattern, text))
+    results = []
+    for i, match in enumerate(matches):
+        date_str = match.group(1)
+        start = match.end()
+        end = matches[i+1].start() if i+1 < len(matches) else len(text)
+        content = text[start:end].strip()
+        # 规范化日期
+        date = normalize_date(date_str)
+        if content:
+            results.append((date, content))
+    return results
+
+def normalize_date(date_str: str) -> str:
+    """
+    尝试多种格式转为 yyyy-mm-dd
+    """
+    date_str = date_str.replace('年', '-').replace('月', '-').replace('日', '').replace('号', '')
+    date_str = date_str.replace('/', '-').replace('.', '-')
+    # 处理无年份情况，补今年
+    if re.match(r"^\\d{1,2}-\\d{1,2}$", date_str):
+        date_str = f"{datetime.now().year}-{date_str}"
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+        return dt.strftime("%Y-%m-%d")
+    except:
+        return date_str  # 原样返回
+
+def summarize_content_with_deepseek(date, content):
+    """
+    调用deepseek播客文稿模块，对单日内容生成一句话摘要
+    """
+    prompt = f"""
+你是一名专业AI新闻播客编剧，请用一句话总结{date}这一天AI产品日报的主要内容，突出重点和亮点，简明扼要，风格口语化但不失专业。原文如下：\n{content}
+"""
+    return call_deepseek(prompt).strip()
+
+def generate_wordcloud(text: str, output_path: str):
+    """
+    生成中文词云图片
+    """
+    words = " ".join(jieba.cut(text))
+    wc = WordCloud(font_path="msyh.ttc", width=800, height=400, background_color="white")
+    wc.generate(words)
+    wc.to_file(output_path) 

@@ -3,7 +3,7 @@ API路由模块
 定义所有的RESTful API端点
 """
 
-from fastapi import APIRouter, UploadFile, File, HTTPException, Depends
+from fastapi import APIRouter, UploadFile, File, HTTPException, Depends, Body
 from fastapi.responses import JSONResponse, FileResponse as FastAPIFileResponse
 from typing import List
 from loguru import logger
@@ -31,7 +31,11 @@ from utils import (
     text_to_speech_edge_tts,
     split_dialogue,
     concat_audios,
-    clean_markdown
+    clean_markdown,
+    split_daily_report_by_date,
+    normalize_date,
+    summarize_content_with_deepseek,
+    generate_wordcloud
 )
 from config import settings
 
@@ -398,6 +402,105 @@ def download_audio_file(filename: str):
     if not os.path.exists(file_path):
         raise HTTPException(status_code=404, detail="音频文件不存在")
     return FastAPIFileResponse(file_path, media_type="audio/mpeg", filename=filename)
+
+
+@router.post("/daily_report/analyze")
+async def analyze_daily_report(file: UploadFile = File(...)):
+    """
+    上传AI日报，自动按日期生成timeline摘要和词云图片
+    """
+    # 1. 保存并读取文本
+    filename, file_path, file_size = await validate_and_save_file(file)
+    if filename.endswith('.docx'):
+        text = read_docx_text(file_path)
+    elif filename.endswith('.pdf'):
+        import pdfplumber
+        with pdfplumber.open(file_path) as pdf:
+            text = "\n".join(page.extract_text() for page in pdf.pages if page.extract_text())
+    else:
+        raise HTTPException(400, "仅支持docx/pdf")
+    # 2. 按日期分割
+    date_contents = split_daily_report_by_date(text)
+    timeline = []
+    for date, content in date_contents:
+        summary = summarize_content_with_deepseek(date, content)
+        timeline.append({"date": date, "summary": summary})
+    timeline.sort(key=lambda x: x["date"])
+    # 3. 生成词云
+    import os
+    from config import settings
+    cloud_map_path = os.path.join(settings.OUTPUT_DIR, f"{filename}_cloudmap.png")
+    generate_wordcloud(text, cloud_map_path)
+    # 4. 返回
+    return {
+        "timeline": timeline,
+        "cloud_map_url": f"/api/files/cloud_map/{os.path.basename(cloud_map_path)}"
+    }
+
+@router.get("/daily_report/selectable")
+async def get_selectable_daily_reports():
+    """
+    获取所有可用于日报分析的docx文件（status=uploaded）
+    """
+    files = await database.get_files_by_filter({"status": "uploaded", "file_type": "docx"})
+    return [
+        {
+            "id": str(f.get('id') or f.get('_id', '')),
+            "filename": f.get('filename', ''),
+            "original_filename": f.get('original_filename', ''),
+            "created_at": f.get('created_at', '')
+        }
+        for f in files if f
+    ]
+
+@router.post("/daily_report/timeline_batch")
+async def analyze_daily_report_timeline_batch(file_ids: List[str] = Body(...)):
+    """
+    批量分析多个日报docx，合并内容后仅生成timeline
+    """
+    files = [await database.get_file_by_id(fid) for fid in file_ids]
+    for f, fid in zip(files, file_ids):
+        if not f or getattr(f, 'file_type', '').lower() != 'docx':
+            raise HTTPException(400, f"文件不存在或类型错误: {fid}")
+    from utils import read_docx_text
+    all_text = ""
+    for f in files:
+        all_text += read_docx_text(f.file_path) + "\n"
+    date_contents = split_daily_report_by_date(all_text)
+    timeline = []
+    for date, content in date_contents:
+        summary = summarize_content_with_deepseek(date, content)
+        timeline.append({"date": date, "summary": summary})
+    timeline.sort(key=lambda x: x["date"])
+    return {"timeline": timeline}
+
+@router.post("/daily_report/cloudmap_batch")
+async def analyze_daily_report_cloudmap_batch(file_ids: List[str] = Body(...)):
+    """
+    批量分析多个日报docx，合并内容后仅生成词云图片
+    """
+    files = [await database.get_file_by_id(fid) for fid in file_ids]
+    for f, fid in zip(files, file_ids):
+        if not f or getattr(f, 'file_type', '').lower() != 'docx':
+            raise HTTPException(400, f"文件不存在或类型错误: {fid}")
+    from utils import read_docx_text
+    all_text = ""
+    for f in files:
+        all_text += read_docx_text(f.file_path) + "\n"
+    import os
+    import uuid
+    from config import settings
+    cloud_map_path = os.path.join(settings.OUTPUT_DIR, f"batch_{uuid.uuid4().hex}_cloudmap.png")
+    generate_wordcloud(all_text, cloud_map_path)
+    return {"cloud_map_url": f"/api/files/cloud_map/{os.path.basename(cloud_map_path)}"}
+
+@router.get("/files/cloud_map/{filename}")
+def download_cloud_map(filename: str):
+    import os
+    file_path = os.path.join("outputs", filename)
+    if not os.path.exists(file_path):
+        raise HTTPException(404, "词云图片不存在")
+    return FastAPIFileResponse(file_path, media_type="image/png", filename=filename)
 
 
 @router.get("/files")
