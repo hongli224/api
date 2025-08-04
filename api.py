@@ -35,7 +35,8 @@ from utils import (
     split_daily_report_by_date,
     normalize_date,
     summarize_content_with_deepseek,
-    generate_wordcloud
+    generate_wordcloud,
+    generate_timeline_with_llm
 )
 from config import settings
 
@@ -455,39 +456,22 @@ async def get_selectable_daily_reports():
 
 @router.post("/daily_report/timeline_batch")
 async def analyze_daily_report_timeline_batch(file_ids: List[str] = Body(...)):
-    """
-    批量分析多个日报docx，合并内容后仅生成timeline
-    """
     files = [await database.get_file_by_id(fid) for fid in file_ids]
-    for f, fid in zip(files, file_ids):
-        if not f or getattr(f, 'file_type', '').lower() != 'docx':
-            raise HTTPException(400, f"文件不存在或类型错误: {fid}")
-    from utils import read_docx_text
-    import os
-    all_text = ""
     valid_files = []
+    all_text = ""
+    import os
     for f in files:
-        # 检查文件是否存在
+        if not f or getattr(f, 'file_type', '').lower() != 'docx':
+            continue
         if not os.path.exists(f.file_path):
-            # 文件不存在，删除数据库记录
             await database.delete_file(str(f.id))
-            logger.warning(f"文件不存在，已删除数据库记录: {f.original_filename}")
             continue
         valid_files.append(f)
         all_text += read_docx_text(f.file_path) + "\n"
-    
-    # 检查是否还有有效文件
     if not valid_files:
         raise HTTPException(400, "所有选择的文件都不存在")
-    
-    logger.info(f"处理 {len(valid_files)} 个有效文件，总文本长度: {len(all_text)}")
-    date_contents = split_daily_report_by_date(all_text)
-    logger.info(f"检测到 {len(date_contents)} 个日期段落")
-    timeline = []
-    for date, content in date_contents:
-        summary = summarize_content_with_deepseek(date, content)
-        timeline.append({"date": date, "summary": summary})
-    timeline.sort(key=lambda x: x["date"])
+    # 直接用大模型生成timeline
+    timeline = generate_timeline_with_llm(all_text)
     return {"timeline": timeline}
 
 @router.post("/daily_report/cloudmap_batch")

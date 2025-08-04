@@ -461,3 +461,33 @@ def generate_wordcloud(text: str, output_path: str):
     )
     wc.generate(words_text)
     wc.to_file(output_path) 
+
+def generate_timeline_with_llm(all_text: str) -> list:
+    """
+    直接用大模型生成 timeline，自动识别日期和摘要
+    """
+    prompt = f"""
+请你阅读以下多天的AI产品日报原文，自动识别每一天的日期（格式如2025-07-14、2025.7.14、2025年7月14日等），为每一天生成一句话摘要。请严格输出如下JSON数组，每项包含date（格式为yyyy-mm-dd）和summary字段。例如：
+[
+  {{"date": "2025-07-14", "summary": "当天AI产品动态的简要总结"}},
+  ...
+]
+原文如下：
+{all_text}
+"""
+    import json, re
+    result = call_deepseek(prompt)
+    from loguru import logger
+    logger.info(f"大模型原始输出: {result}")
+    try:
+        return json.loads(result)
+    except Exception as e:
+        logger.warning(f"解析大模型输出失败: {e}")
+        # 尝试用正则提取 JSON 数组
+        match = re.search(r'(\[.*?\])', result, re.DOTALL)
+        if match:
+            try:
+                return json.loads(match.group(1))
+            except Exception as e2:
+                logger.warning(f"正则提取后解析失败: {e2}")
+        return [] 

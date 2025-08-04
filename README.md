@@ -1,7 +1,7 @@
 # File Conversion API
 
 一个基于Python FastAPI的文件转换后端服务，支持DOCX转PDF等功能。
-
+source /home/devbox/project/venv/bin/activate
 ## 功能特性
 
 - 📁 **文件上传**: 支持DOCX和PDF文件上传
