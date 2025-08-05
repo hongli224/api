@@ -104,6 +104,23 @@ class ConversionRequest(BaseModel):
         }
 
 
+class WeeklyReportRequest(BaseModel):
+    """
+    周报生成请求模型
+    用于接收前端传递的期望文件名
+    """
+    
+    expected_filename: Optional[str] = Field(None, description="期望的周报文件名")
+    
+    class Config:
+        """Pydantic配置"""
+        json_schema_extra = {
+            "example": {
+                "expected_filename": "2024年第1周周报.docx"
+            }
+        }
+
+
 class ConversionResponse(BaseModel):
     """
     转换响应模型

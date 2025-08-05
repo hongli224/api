@@ -3763,3 +3763,110 @@ created_at
 2025-08-05 07:21:31 | INFO     | api:delete_file:665 - 文件删除成功: 6891af2b4e2c3fd1787b289a
 2025-08-05 07:21:31 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
 2025-08-05 07:21:31 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:26:33 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:26:33 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:26:55 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:26:55 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:27:04 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 6887423bef3ea42958584e75
+2025-08-05 07:28:02 | INFO     | api:generate_weekly_report:780 - 周报生成成功: outputs/周报_6887423bef3e.docx, 数据库ID: 6891b282cd95b012f9ac8177
+2025-08-05 07:28:08 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:28:08 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:33:55 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:33:55 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:34:07 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 68907a447a5c7e23a2b12f4e
+2025-08-05 07:35:12 | INFO     | api:generate_weekly_report:780 - 周报生成成功: outputs/周报_68907a447a5c.docx, 数据库ID: 6891b430cd95b012f9ac8178
+2025-08-05 07:35:26 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:35:26 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:44:00 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 6887423bef3ea42958584e75
+2025-08-05 07:45:00 | INFO     | api:generate_weekly_report:780 - 周报生成成功: outputs/周报_6887423bef3e.docx, 数据库ID: 6891b67ccd95b012f9ac8179
+2025-08-05 07:45:00 | INFO     | api:convert_docx_to_pdf_api:135 - 开始处理DOCX转PDF请求: 文件ID 6887423bef3ea42958584e75
+2025-08-05 07:45:05 | INFO     | utils:convert_docx_to_pdf:180 - DOCX转PDF成功: uploads/0728产品日报_fe511e7f-c18c-4bd2-ba38-6850395efd15.docx -> outputs/0728产品日报_f9663be7-f26e-4aed-98f0-7630550dfd34.pdf
+2025-08-05 07:45:05 | INFO     | api:convert_docx_to_pdf_api:190 - DOCX转PDF成功: 0728产品日报_fe511e7f-c18c-4bd2-ba38-6850395efd15.docx -> 0728产品日报_f9663be7-f26e-4aed-98f0-7630550dfd34.pdf
+2025-08-05 07:47:10 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:47:10 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:48:30 | INFO     | api:delete_file:648 - 删除文件: 6891b681cd95b012f9ac817a
+2025-08-05 07:48:30 | INFO     | utils:cleanup_file:229 - 文件已删除: outputs/0728产品日报_f9663be7-f26e-4aed-98f0-7630550dfd34.pdf
+2025-08-05 07:48:30 | INFO     | api:delete_file:665 - 文件删除成功: 6891b681cd95b012f9ac817a
+2025-08-05 07:48:30 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:48:30 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:54:25 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 6887423bef3ea42958584e75
+2025-08-05 07:55:28 | INFO     | api:generate_weekly_report:780 - 周报生成成功: outputs/周报_6887423bef3e.docx, 数据库ID: 6891b8f0cd95b012f9ac817b
+2025-08-05 07:56:27 | INFO     | api:upload_file:68 - 开始处理文件上传: 赫赫.docx
+2025-08-05 07:56:27 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/赫赫_ff5f3cf9-697e-49a0-8aa1-9d8c5aa3dd91.docx
+2025-08-05 07:56:27 | INFO     | api:upload_file:103 - 文件上传成功: 赫赫_ff5f3cf9-697e-49a0-8aa1-9d8c5aa3dd91.docx, ID: 6891b92bcd95b012f9ac817c
+2025-08-05 07:56:27 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:56:27 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:56:41 | INFO     | api:delete_file:648 - 删除文件: 6891b92bcd95b012f9ac817c
+2025-08-05 07:56:41 | INFO     | utils:cleanup_file:229 - 文件已删除: uploads/赫赫_ff5f3cf9-697e-49a0-8aa1-9d8c5aa3dd91.docx
+2025-08-05 07:56:41 | INFO     | api:delete_file:665 - 文件删除成功: 6891b92bcd95b012f9ac817c
+2025-08-05 07:56:41 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:56:41 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 08:03:20 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:03:20 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:03:20 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:03:23 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:03:23 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:03:23 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:03:23 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:03:23 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:03:27 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:03:27 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:03:27 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:03:29 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:03:29 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:03:29 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:03:29 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:03:29 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:03:34 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:03:34 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:03:34 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:03:36 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:03:36 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:03:36 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:03:36 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:03:36 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:03:43 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:03:43 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:03:43 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:03:45 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:03:45 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:03:45 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:03:45 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:03:45 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:03:58 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:03:58 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:03:58 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:04:00 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:04:00 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:04:00 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:04:00 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:04:00 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:04:19 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 08:04:19 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 08:04:19 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 08:04:20 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 08:04:20 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 08:04:20 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 08:04:20 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 08:04:20 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 08:06:23 | INFO     | api:upload_file:69 - 开始处理文件上传: 0805产品日报.docx
+2025-08-05 08:06:23 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/0805产品日报_c7affb78-6731-4a7c-9c37-60348df3661e.docx
+2025-08-05 08:06:23 | INFO     | api:upload_file:104 - 文件上传成功: 0805产品日报_c7affb78-6731-4a7c-9c37-60348df3661e.docx, ID: 6891bb7f035bd839fb2e0b65
+2025-08-05 08:06:23 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:06:23 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-05 08:06:28 | INFO     | api:convert_docx_to_pdf_api:136 - 开始处理DOCX转PDF请求: 文件ID 6891bb7f035bd839fb2e0b65
+2025-08-05 08:06:33 | INFO     | utils:convert_docx_to_pdf:180 - DOCX转PDF成功: uploads/0805产品日报_c7affb78-6731-4a7c-9c37-60348df3661e.docx -> outputs/0805产品日报_36912ab6-5bb0-4002-863c-1b66c89ffbc5.pdf
+2025-08-05 08:06:33 | INFO     | api:convert_docx_to_pdf_api:191 - DOCX转PDF成功: 0805产品日报_c7affb78-6731-4a7c-9c37-60348df3661e.docx -> 0805产品日报_36912ab6-5bb0-4002-863c-1b66c89ffbc5.pdf
+2025-08-05 08:06:33 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:06:33 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-05 08:06:37 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/0805产品日报_69e43826-5090-4065-9f54-fe9346dfecf2.docx
+2025-08-05 08:07:33 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:07:33 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-05 08:09:07 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:09:07 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-05 08:10:31 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:10:31 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-05 08:11:27 | INFO     | api:generate_weekly_report:699 - 开始生成周报: 6891a98cbe1ab5332f72f02d
+2025-08-05 08:12:23 | INFO     | api:generate_weekly_report:790 - 周报生成成功: outputs/2025年第32周周报.docx, 数据库ID: 6891bce7035bd839fb2e0b69
+2025-08-05 08:12:57 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-05 08:12:57 | INFO     | api:get_files:554 - 成功获取 10 个文件

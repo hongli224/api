@@ -16,7 +16,8 @@ from database import (
     FileModel, 
     FileResponse, 
     ConversionRequest, 
-    ConversionResponse
+    ConversionResponse,
+    WeeklyReportRequest
 )
 from utils import (
     validate_and_save_file, 
@@ -674,7 +675,7 @@ async def delete_file(file_id: str):
 
 
 @router.post("/files/generate_weekly_report/{file_id}")
-async def generate_weekly_report(file_id: str):
+async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Body(...)):
     """
     生成周报接口
     
@@ -686,6 +687,7 @@ async def generate_weekly_report(file_id: str):
     
     Args:
         file_id: 文件ID
+        request: 周报生成请求，包含期望的文件名
         
     Returns:
         生成的周报文件
@@ -748,11 +750,19 @@ async def generate_weekly_report(file_id: str):
         weekly_report_content = call_deepseek(prompt)
         
         # 生成周报文件名
-        # 限制文件名最多15个字符（不包含扩展名）
-        base_filename = f"周报_{file_id}"
-        if len(base_filename) > 15:
-            base_filename = base_filename[:15]
-        weekly_report_filename = f"{base_filename}.docx"
+        # 使用前端传递的期望文件名，如果没有则使用默认格式
+        if request.expected_filename:
+            weekly_report_filename = request.expected_filename
+            # 确保文件名有.docx扩展名
+            if not weekly_report_filename.endswith('.docx'):
+                weekly_report_filename += '.docx'
+        else:
+            # 默认文件名格式，限制最多15个字符（不包含扩展名）
+            base_filename = f"周报_{file_id}"
+            if len(base_filename) > 15:
+                base_filename = base_filename[:15]
+            weekly_report_filename = f"{base_filename}.docx"
+        
         weekly_report_path = os.path.join(settings.OUTPUT_DIR, weekly_report_filename)
         
         # 将周报内容写入Word文档
