@@ -671,3 +671,228 @@ async def delete_file(file_id: str):
     except Exception as e:
         logger.error(f"删除文件失败: {str(e)}")
         raise HTTPException(status_code=500, detail="删除文件失败") 
+
+
+@router.post("/files/generate_weekly_report/{file_id}")
+async def generate_weekly_report(file_id: str):
+    """
+    生成周报接口
+    
+    功能：
+    - 根据文件ID从数据库的"files"集合中找到文件
+    - 读取文件内容
+    - 调用大模型总结内容生成周报
+    - 返回生成的周报文件
+    
+    Args:
+        file_id: 文件ID
+        
+    Returns:
+        生成的周报文件
+        
+    Raises:
+        HTTPException: 文件不存在或生成失败时抛出异常
+    """
+    try:
+        logger.info(f"开始生成周报: {file_id}")
+        
+        # 获取文件信息
+        file_model = await database.get_file_by_id(file_id)
+        
+        if not file_model:
+            raise HTTPException(status_code=404, detail="文件不存在")
+        
+        # 检查文件是否存在
+        if not os.path.exists(file_model.file_path):
+            raise HTTPException(status_code=404, detail="文件在服务器上不存在")
+        
+        # 读取文件内容
+        file_content = ""
+        if file_model.file_type == "docx":
+            file_content = read_docx_text(file_model.file_path)
+        elif file_model.file_type == "pdf":
+            # 对于PDF文件，需要先转换为文本
+            # 这里可以添加PDF文本提取功能
+            raise HTTPException(status_code=400, detail="暂不支持PDF文件生成周报")
+        else:
+            raise HTTPException(status_code=400, detail="不支持的文件类型")
+        
+        if not file_content.strip():
+            raise HTTPException(status_code=400, detail="文件内容为空")
+        
+        # 构建AI产品新闻周报生成提示词
+        prompt = f"""
+请根据以下内容生成一份详细的AI产品新闻周报：
+
+{file_content}
+
+要求：
+1. 周报应该聚焦于AI产品相关的新闻、动态和趋势
+2. 按照时间顺序或重要性进行组织
+3. 突出重要的AI产品发布、技术突破、市场动态
+4. 使用清晰的结构和格式，包含以下部分：
+   - 本周AI产品重要新闻
+   - 技术突破与创新
+   - 市场动态与趋势
+   - 重要公司动态
+   - 行业影响分析
+5. 语言简洁明了，重点突出，适合专业人士阅读
+6. 如果有具体数据、产品信息或技术细节，请详细列出
+7. 分析新闻对行业的影响和未来趋势
+8. 使用专业术语，保持客观中立的语调
+
+请生成一份完整的AI产品新闻周报。
+"""
+        
+        # 调用大模型生成周报
+        weekly_report_content = call_deepseek(prompt)
+        
+        # 生成周报文件名
+        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+        weekly_report_filename = f"weekly_report_{file_id}_{timestamp}.docx"
+        weekly_report_path = os.path.join(settings.OUTPUT_DIR, weekly_report_filename)
+        
+        # 将周报内容写入Word文档
+        write_docx_text(weekly_report_content, weekly_report_path)
+        
+        # 获取生成的文件大小
+        weekly_report_size = get_file_size(weekly_report_path)
+        
+        # 准备周报文件数据
+        weekly_report_data = {
+            "filename": weekly_report_filename,
+            "original_filename": weekly_report_filename,
+            "file_path": weekly_report_path,
+            "file_size": weekly_report_size,
+            "file_type": "docx",
+            "status": "weekreport"
+        }
+        
+        # 将周报文件保存到数据库
+        weekly_report_model = await database.create_file(weekly_report_data)
+        
+        if not weekly_report_model:
+            raise HTTPException(status_code=500, detail="保存周报文件到数据库失败")
+        
+        logger.info(f"周报生成成功: {weekly_report_path}, 数据库ID: {weekly_report_model.id}")
+        
+        # 返回周报文件
+        return FastAPIFileResponse(
+            path=weekly_report_path,
+            filename=weekly_report_filename,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+        
+    except HTTPException:
+        # 重新抛出HTTP异常
+        raise
+    except Exception as e:
+        logger.error(f"生成周报失败: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"生成周报失败: {str(e)}")
+
+
+@router.get("/files/generated_reports")
+async def get_generated_reports(skip: int = 0, limit: int = 100):
+    """
+    获取所有生成的周报文件列表
+    
+    功能：
+    - 查询数据库中status为"weekreport"的文件
+    - 返回生成的周报文件列表
+    
+    Args:
+        skip: 跳过的记录数
+        limit: 返回的记录数限制
+        
+    Returns:
+        生成的周报文件列表
+    """
+    try:
+        logger.info(f"获取生成的周报文件列表: skip={skip}, limit={limit}")
+        
+        # 使用过滤器查询status为"weekreport"的文件
+        filter_dict = {"status": "weekreport"}
+        generated_files = await database.get_files_by_filter(filter_dict)
+        
+        # 转换为响应格式
+        response_files = []
+        for file_data in generated_files:
+            response_files.append({
+                "id": str(file_data["_id"]),
+                "filename": file_data["filename"],
+                "original_filename": file_data["original_filename"],
+                "file_size": file_data["file_size"],
+                "file_type": file_data["file_type"],
+                "status": file_data["status"],
+                "created_at": file_data["created_at"]
+            })
+        
+        # 按创建时间倒序排列
+        response_files.sort(key=lambda x: x["created_at"], reverse=True)
+        
+        # 应用分页
+        paginated_files = response_files[skip:skip + limit]
+        
+        logger.info(f"成功获取生成的周报文件列表，共 {len(paginated_files)} 个文件")
+        
+        return {
+            "files": paginated_files,
+            "total": len(response_files),
+            "skip": skip,
+            "limit": limit
+        }
+        
+    except Exception as e:
+        logger.error(f"获取生成的周报文件列表失败: {str(e)}")
+        raise HTTPException(status_code=500, detail="获取生成的周报文件列表失败")
+
+
+@router.get("/files/generated_reports/{report_id}/download")
+async def download_generated_report(report_id: str):
+    """
+    下载生成的周报文件
+    
+    功能：
+    - 根据周报文件ID下载生成的周报文件
+    
+    Args:
+        report_id: 周报文件ID
+        
+    Returns:
+        生成的周报文件
+        
+    Raises:
+        HTTPException: 文件不存在时抛出异常
+    """
+    try:
+        logger.info(f"下载生成的周报文件: {report_id}")
+        
+        # 获取周报文件信息
+        report_model = await database.get_file_by_id(report_id)
+        
+        if not report_model:
+            raise HTTPException(status_code=404, detail="周报文件不存在")
+        
+        # 检查文件状态
+        if report_model.status != "weekreport":
+            raise HTTPException(status_code=400, detail="该文件不是生成的周报文件")
+        
+        # 检查文件是否存在于磁盘
+        if not os.path.exists(report_model.file_path):
+            raise HTTPException(status_code=404, detail="周报文件在服务器上不存在")
+        
+        logger.info(f"成功下载周报文件: {report_model.filename}")
+        
+        # 返回周报文件
+        return FastAPIFileResponse(
+            path=report_model.file_path,
+            filename=report_model.original_filename,
+            media_type="application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+        )
+        
+    except HTTPException:
+        # 重新抛出HTTP异常
+        raise
+    except Exception as e:
+        logger.error(f"下载周报文件失败: {str(e)}")
+        raise HTTPException(status_code=500, detail="下载周报文件失败")
