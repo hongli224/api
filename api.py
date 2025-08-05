@@ -748,8 +748,11 @@ async def generate_weekly_report(file_id: str):
         weekly_report_content = call_deepseek(prompt)
         
         # 生成周报文件名
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-        weekly_report_filename = f"weekly_report_{file_id}_{timestamp}.docx"
+        # 限制文件名最多15个字符（不包含扩展名）
+        base_filename = f"周报_{file_id}"
+        if len(base_filename) > 15:
+            base_filename = base_filename[:15]
+        weekly_report_filename = f"{base_filename}.docx"
         weekly_report_path = os.path.join(settings.OUTPUT_DIR, weekly_report_filename)
         
         # 将周报内容写入Word文档

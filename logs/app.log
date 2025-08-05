@@ -3702,3 +3702,64 @@ created_at
 2025-08-05 06:49:48 | INFO     | api:get_files:553 - 成功获取 10 个文件
 2025-08-05 06:50:21 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
 2025-08-05 06:50:21 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:12:31 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 07:12:31 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 07:12:32 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 07:12:32 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 07:12:32 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 07:12:32 | INFO     | api:delete_file:648 - 删除文件: 6891ae9bec5ce150bbaedb8c
+2025-08-05 07:12:32 | INFO     | api:delete_file:665 - 文件删除成功: 6891ae9bec5ce150bbaedb8c
+2025-08-05 07:12:32 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:12:32 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:12:42 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 6891a98cbe1ab5332f72f02d
+2025-08-05 07:13:47 | INFO     | api:generate_weekly_report:777 - 周报生成成功: outputs/weekly_report_6891a98cbe1ab5332f72f02d_20250805_071347.docx, 数据库ID: 6891af2b4e2c3fd1787b289a
+2025-08-05 07:14:03 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:14:03 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:16:07 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 07:16:07 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 07:16:07 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 07:16:10 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 07:16:10 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 07:16:10 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 07:16:10 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 07:16:10 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 07:16:16 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 07:16:16 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 07:16:16 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 07:16:18 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 07:16:18 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 07:16:18 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 07:16:18 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 07:16:18 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 07:16:27 | INFO     | api:generate_weekly_report:697 - 开始生成周报: 6891a98cbe1ab5332f72f02d
+2025-08-05 07:17:37 | INFO     | api:generate_weekly_report:781 - 周报生成成功: outputs/周报_20250805_071.docx, 数据库ID: 6891b011cac63d52bba58676
+2025-08-05 07:18:00 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:18:00 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:21:08 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 07:21:08 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 07:21:08 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 07:21:10 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 07:21:10 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 07:21:10 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 07:21:10 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 07:21:10 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 07:21:21 | INFO     | main:lifespan:66 - 🛑 正在关闭File Conversion API服务...
+2025-08-05 07:21:21 | INFO     | main:lifespan:71 - ✅ 数据库连接已断开
+2025-08-05 07:21:21 | INFO     | main:lifespan:76 - 👋 服务已关闭
+2025-08-05 07:21:23 | INFO     | main:lifespan:45 - 🚀 启动File Conversion API服务...
+2025-08-05 07:21:23 | INFO     | main:lifespan:50 - ✅ 目录结构创建完成
+2025-08-05 07:21:23 | INFO     | main:lifespan:54 - ✅ 数据库连接成功
+2025-08-05 07:21:23 | INFO     | main:lifespan:56 - 🎉 服务启动成功！访问地址: http://0.0.0.0:5000
+2025-08-05 07:21:23 | INFO     | main:lifespan:57 - 📚 API文档地址: http://0.0.0.0:5000/docs
+2025-08-05 07:21:29 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:21:29 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:21:30 | INFO     | api:delete_file:648 - 删除文件: 6891b011cac63d52bba58676
+2025-08-05 07:21:30 | INFO     | utils:cleanup_file:229 - 文件已删除: outputs/周报_20250805_071.docx
+2025-08-05 07:21:30 | INFO     | api:delete_file:665 - 文件删除成功: 6891b011cac63d52bba58676
+2025-08-05 07:21:30 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:21:30 | INFO     | api:get_files:553 - 成功获取 10 个文件
+2025-08-05 07:21:30 | INFO     | api:delete_file:648 - 删除文件: 6891af2b4e2c3fd1787b289a
+2025-08-05 07:21:30 | INFO     | utils:cleanup_file:229 - 文件已删除: outputs/weekly_report_6891a98cbe1ab5332f72f02d_20250805_071347.docx
+2025-08-05 07:21:31 | INFO     | api:delete_file:665 - 文件删除成功: 6891af2b4e2c3fd1787b289a
+2025-08-05 07:21:31 | INFO     | api:get_files:536 - 获取文件列表: skip=0, limit=10
+2025-08-05 07:21:31 | INFO     | api:get_files:553 - 成功获取 10 个文件
