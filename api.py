@@ -680,14 +680,14 @@ async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Bo
     生成周报接口
     
     功能：
-    - 根据文件ID从数据库的"files"集合中找到文件
-    - 读取文件内容
+    - 根据文件ID列表从数据库的"files"集合中找到文件
+    - 读取所有文件内容并合并
     - 调用大模型总结内容生成周报
     - 返回生成的周报文件
     
     Args:
-        file_id: 文件ID
-        request: 周报生成请求，包含期望的文件名
+        file_id: 主文件ID（用于路径参数）
+        request: 周报生成请求，包含文件ID列表、周次信息和期望的文件名
         
     Returns:
         生成的周报文件
@@ -696,37 +696,52 @@ async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Bo
         HTTPException: 文件不存在或生成失败时抛出异常
     """
     try:
-        logger.info(f"开始生成周报: {file_id}")
+        # 确定要处理的文件ID列表
+        file_ids = request.file_ids if request.file_ids else [file_id]
+        logger.info(f"开始生成周报，文件ID列表: {file_ids}")
         
-        # 获取文件信息
-        file_model = await database.get_file_by_id(file_id)
+        # 读取所有文件内容
+        all_file_contents = []
+        for current_file_id in file_ids:
+            # 获取文件信息
+            file_model = await database.get_file_by_id(current_file_id)
+            
+            if not file_model:
+                raise HTTPException(status_code=404, detail=f"文件不存在: {current_file_id}")
+            
+            # 检查文件是否存在
+            if not os.path.exists(file_model.file_path):
+                raise HTTPException(status_code=404, detail=f"文件在服务器上不存在: {current_file_id}")
+            
+            # 读取文件内容
+            file_content = ""
+            if file_model.file_type == "docx":
+                file_content = read_docx_text(file_model.file_path)
+            elif file_model.file_type == "pdf":
+                # 对于PDF文件，需要先转换为文本
+                # 这里可以添加PDF文本提取功能
+                raise HTTPException(status_code=400, detail="暂不支持PDF文件生成周报")
+            else:
+                raise HTTPException(status_code=400, detail="不支持的文件类型")
+            
+            if not file_content.strip():
+                logger.warning(f"文件内容为空: {current_file_id}")
+                continue
+                
+            all_file_contents.append(file_content)
         
-        if not file_model:
-            raise HTTPException(status_code=404, detail="文件不存在")
+        if not all_file_contents:
+            raise HTTPException(status_code=400, detail="所有文件内容都为空")
         
-        # 检查文件是否存在
-        if not os.path.exists(file_model.file_path):
-            raise HTTPException(status_code=404, detail="文件在服务器上不存在")
-        
-        # 读取文件内容
-        file_content = ""
-        if file_model.file_type == "docx":
-            file_content = read_docx_text(file_model.file_path)
-        elif file_model.file_type == "pdf":
-            # 对于PDF文件，需要先转换为文本
-            # 这里可以添加PDF文本提取功能
-            raise HTTPException(status_code=400, detail="暂不支持PDF文件生成周报")
-        else:
-            raise HTTPException(status_code=400, detail="不支持的文件类型")
-        
-        if not file_content.strip():
-            raise HTTPException(status_code=400, detail="文件内容为空")
+        # 合并所有文件内容
+        combined_content = "\n\n".join(all_file_contents)
         
         # 构建AI产品新闻周报生成提示词
+        week_info = f"（周次：{request.week_key}）" if request.week_key else ""
         prompt = f"""
-请根据以下内容生成一份详细的AI产品新闻周报：
+请根据以下{len(file_ids)}个日报文件的内容生成一份详细的AI产品新闻周报{week_info}：
 
-{file_content}
+{combined_content}
 
 要求：
 1. 周报应该聚焦于AI产品相关的新闻、动态和趋势
@@ -742,6 +757,7 @@ async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Bo
 6. 如果有具体数据、产品信息或技术细节，请详细列出
 7. 分析新闻对行业的影响和未来趋势
 8. 使用专业术语，保持客观中立的语调
+9. 整合多个日报的内容，避免重复，突出本周的重要事件
 
 请生成一份完整的AI产品新闻周报。
 """
@@ -757,8 +773,13 @@ async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Bo
             if not weekly_report_filename.endswith('.docx'):
                 weekly_report_filename += '.docx'
         else:
-            # 默认文件名格式，限制最多15个字符（不包含扩展名）
-            base_filename = f"周报_{file_id}"
+            # 默认文件名格式，优先使用周次信息
+            if request.week_key:
+                base_filename = f"周报_{request.week_key}"
+            else:
+                base_filename = f"周报_{file_id}"
+            
+            # 限制文件名最多15个字符（不包含扩展名）
             if len(base_filename) > 15:
                 base_filename = base_filename[:15]
             weekly_report_filename = f"{base_filename}.docx"

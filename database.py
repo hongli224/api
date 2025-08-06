@@ -107,16 +107,20 @@ class ConversionRequest(BaseModel):
 class WeeklyReportRequest(BaseModel):
     """
     周报生成请求模型
-    用于接收前端传递的期望文件名
+    用于接收前端传递的期望文件名和多个文件ID
     """
     
+    file_ids: Optional[List[str]] = Field(None, description="要生成周报的文件ID列表")
+    week_key: Optional[str] = Field(None, description="周次标识")
     expected_filename: Optional[str] = Field(None, description="期望的周报文件名")
     
     class Config:
         """Pydantic配置"""
         json_schema_extra = {
             "example": {
-                "expected_filename": "2024年第1周周报.docx"
+                "file_ids": ["file1", "file2", "file3"],
+                "week_key": "2025-W01",
+                "expected_filename": "2025年第01周周报.docx"
             }
         }
 
