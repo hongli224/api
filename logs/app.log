@@ -4556,3 +4556,107 @@ created_at
 2025-08-06 07:48:41 | INFO     | api:get_files:554 - 成功获取 111 个文件
 2025-08-06 07:48:41 | INFO     | api:generate_weekly_report:701 - 开始生成周报，文件ID列表: ['6887423bef3ea42958584e75', '68907a667a5c7e23a2b12f5b', '68907a697a5c7e23a2b12f5c', '68907a6b7a5c7e23a2b12f5d']
 2025-08-06 07:49:39 | INFO     | api:generate_weekly_report:833 - 周报生成成功: outputs/2025年第31周周报.docx, 数据库ID: 68930913563c12bf48501ef7
+2025-08-06 07:50:57 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:50:57 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 07:51:13 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:51:13 | INFO     | api:get_files:554 - 成功获取 112 个文件
+2025-08-06 07:51:23 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:51:23 | INFO     | api:get_files:554 - 成功获取 112 个文件
+2025-08-06 07:54:29 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:54:29 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 07:57:33 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:57:33 | INFO     | api:get_files:554 - 成功获取 112 个文件
+2025-08-06 07:57:35 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:57:35 | INFO     | api:get_files:554 - 成功获取 112 个文件
+2025-08-06 07:58:16 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:58:16 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 07:59:38 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:59:38 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 07:59:41 | INFO     | api:upload_file:69 - 开始处理文件上传: 0806产品日报.docx
+2025-08-06 07:59:41 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/0806产品日报_609eb8a2-a420-4cf0-8470-b25f84a43342.docx
+2025-08-06 07:59:41 | INFO     | api:upload_file:104 - 文件上传成功: 0806产品日报_609eb8a2-a420-4cf0-8470-b25f84a43342.docx, ID: 68930b6d563c12bf48501ef8
+2025-08-06 07:59:41 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:59:41 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 07:59:45 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:59:45 | INFO     | api:get_files:554 - 成功获取 113 个文件
+2025-08-06 07:59:46 | INFO     | api:convert_docx_to_pdf_api:136 - 开始处理DOCX转PDF请求: 文件ID 68930b6d563c12bf48501ef8
+2025-08-06 07:59:50 | INFO     | utils:convert_docx_to_pdf:180 - DOCX转PDF成功: uploads/0806产品日报_609eb8a2-a420-4cf0-8470-b25f84a43342.docx -> outputs/0806产品日报_489aeba0-aad7-4866-840b-b1fe6bfa807a.pdf
+2025-08-06 07:59:50 | INFO     | api:convert_docx_to_pdf_api:191 - DOCX转PDF成功: 0806产品日报_609eb8a2-a420-4cf0-8470-b25f84a43342.docx -> 0806产品日报_489aeba0-aad7-4866-840b-b1fe6bfa807a.pdf
+2025-08-06 07:59:52 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 07:59:52 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 07:59:53 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 07:59:53 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:02:12 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:02:12 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:02:15 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/0806产品日报_ace21d32-4480-478e-ad96-c69854cc2ff5.docx
+2025-08-06 08:02:59 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:02:59 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:03:52 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:03:52 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:05:33 | INFO     | api:delete_file:649 - 删除文件: 68930c68563c12bf48501efb
+2025-08-06 08:05:33 | INFO     | utils:cleanup_file:229 - 文件已删除: audio_files/0806产品日报_播客稿_32898282-a348-4245-81ee-788dbefe9dc7_8cf67aa9d4a547338c1f9edcd24005e1.mp3
+2025-08-06 08:05:33 | INFO     | api:delete_file:666 - 文件删除成功: 68930c68563c12bf48501efb
+2025-08-06 08:05:33 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:05:33 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:05:33 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:05:33 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:05:34 | INFO     | api:delete_file:649 - 删除文件: 68930c33563c12bf48501efa
+2025-08-06 08:05:34 | INFO     | utils:cleanup_file:229 - 文件已删除: outputs/0806产品日报_播客稿_32898282-a348-4245-81ee-788dbefe9dc7.docx
+2025-08-06 08:05:34 | INFO     | api:delete_file:666 - 文件删除成功: 68930c33563c12bf48501efa
+2025-08-06 08:05:34 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:05:34 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:05:34 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:05:34 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:05:51 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:05:51 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:05:53 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:05:53 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:06:03 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:06:03 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:06:07 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:06:08 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:06:55 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:06:55 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:06:59 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:06:59 | INFO     | api:get_files:554 - 成功获取 114 个文件
+2025-08-06 08:07:00 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/0806产品日报_186bb29d-21c5-49bd-a804-0c07e501df72.docx
+2025-08-06 08:07:47 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:07:47 | INFO     | api:get_files:554 - 成功获取 115 个文件
+2025-08-06 08:09:01 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:09:01 | INFO     | api:get_files:554 - 成功获取 116 个文件
+2025-08-06 08:09:06 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:09:06 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:15:04 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:15:04 | INFO     | api:get_files:554 - 成功获取 116 个文件
+2025-08-06 08:15:07 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:15:07 | INFO     | api:get_files:554 - 成功获取 116 个文件
+2025-08-06 08:15:51 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:15:51 | INFO     | api:get_files:554 - 成功获取 116 个文件
+2025-08-06 08:15:55 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:15:55 | INFO     | api:get_files:554 - 成功获取 116 个文件
+2025-08-06 08:15:55 | INFO     | api:generate_weekly_report:701 - 开始生成周报，文件ID列表: ['68907a447a5c7e23a2b12f4e', '68907a467a5c7e23a2b12f4f', '68907aa97a5c7e23a2b12f60', '68907abd7a5c7e23a2b12f61', '68907ada7a5c7e23a2b12f62']
+2025-08-06 08:17:00 | INFO     | api:generate_weekly_report:833 - 周报生成成功: outputs/2025年第27周周报.docx, 数据库ID: 68930f7c563c12bf48501efe
+2025-08-06 08:23:04 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:23:04 | INFO     | api:get_files:554 - 成功获取 117 个文件
+2025-08-06 08:23:05 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=1000
+2025-08-06 08:23:05 | INFO     | api:get_files:554 - 成功获取 117 个文件
+2025-08-06 08:23:06 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:23:06 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:25 | INFO     | api:upload_file:69 - 开始处理文件上传: 赫赫日报.docx
+2025-08-06 08:23:25 | INFO     | utils:save_uploaded_file:90 - 文件已保存: uploads/赫赫日报_fab9c8d4-eae1-42d9-a176-59ac4bb133ea.docx
+2025-08-06 08:23:25 | INFO     | api:upload_file:104 - 文件上传成功: 赫赫日报_fab9c8d4-eae1-42d9-a176-59ac4bb133ea.docx, ID: 689310fd563c12bf48501eff
+2025-08-06 08:23:25 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:23:25 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:29 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:23:29 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:31 | INFO     | api:delete_file:649 - 删除文件: 689310fd563c12bf48501eff
+2025-08-06 08:23:31 | INFO     | utils:cleanup_file:229 - 文件已删除: uploads/赫赫日报_fab9c8d4-eae1-42d9-a176-59ac4bb133ea.docx
+2025-08-06 08:23:31 | INFO     | api:delete_file:666 - 文件删除成功: 689310fd563c12bf48501eff
+2025-08-06 08:23:31 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:23:31 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:31 | INFO     | api:get_files:537 - 获取文件列表: skip=0, limit=10
+2025-08-06 08:23:31 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:36 | INFO     | api:get_files:537 - 获取文件列表: skip=10, limit=10
+2025-08-06 08:23:36 | INFO     | api:get_files:554 - 成功获取 10 个文件
+2025-08-06 08:23:36 | INFO     | api:get_files:537 - 获取文件列表: skip=10, limit=10
+2025-08-06 08:23:36 | INFO     | api:get_files:554 - 成功获取 10 个文件
