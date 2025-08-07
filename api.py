@@ -749,6 +749,9 @@ async def generate_weekly_report(file_id: str, request: WeeklyReportRequest = Bo
 3. 突出重要的AI产品发布、技术突破、市场动态
 4. 使用适合Word文档展示的格式，包含以下部分：
 
+【本周主要关注产品】
+（列出本周最受关注的主要AI产品，包括产品名称、公司、核心功能和特点，每个产品单独成段）
+
 【本周AI产品重要新闻】
 （列出本周最重要的AI产品新闻，每条新闻单独成段）
 
