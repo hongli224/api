@@ -955,3 +955,85 @@ async def download_generated_report(report_id: str):
     except Exception as e:
         logger.error(f"下载周报文件失败: {str(e)}")
         raise HTTPException(status_code=500, detail="下载周报文件失败")
+
+
+@router.post("/industry_analysis/report")
+async def generate_industry_analysis_report(request: dict = Body(...)):
+    """
+    生成行业分析报告
+    
+    功能：
+    - 接收用户输入的行业信息
+    - 使用大模型生成行业分析报告
+    - 包括市场分析、用户痛点、玩家分析等
+    
+    Args:
+        request: 包含用户输入文本的请求体
+            - text: 用户输入的行业信息文本
+            
+    Returns:
+        生成的行业分析报告
+        
+    Raises:
+        HTTPException: 生成失败时抛出异常
+    """
+    try:
+        logger.info("开始生成行业分析报告")
+        
+        # 获取用户输入的文本
+        user_text = request.get("text", "")
+        if not user_text:
+            raise HTTPException(status_code=400, detail="请提供行业信息文本")
+        
+        # 构建分析报告提示词
+        prompt = f"""
+请根据以下行业信息，生成一份详细的行业分析报告。报告需要包含以下内容：
+
+## 行业信息
+{user_text}
+
+## 分析要求
+请从以下三个维度进行深入分析：
+
+### 1. 市场分析
+- 市场规模和增长趋势
+- 市场驱动因素
+- 市场挑战和机遇
+- 区域市场分布
+
+### 2. 用户痛点分析
+- 当前用户面临的主要问题
+- 用户需求和期望
+- 用户体验痛点
+- 未满足的市场需求
+
+### 3. 竞争格局分析
+- 主要玩家和市场份额
+- 商业模式分析
+- 竞争优势和劣势
+- 行业发展趋势
+
+请生成一份结构清晰、内容详实的行业分析报告，使用中文输出。
+"""
+        
+        # 调用大模型生成分析报告
+        analysis_report = call_deepseek(prompt)
+        
+        logger.info("行业分析报告生成成功")
+        
+        return {
+            "success": True,
+            "message": "行业分析报告生成成功",
+            "data": {
+                "report": analysis_report,
+                "input_text": user_text,
+                "generated_at": datetime.utcnow().isoformat()
+            }
+        }
+        
+    except HTTPException:
+        # 重新抛出HTTP异常
+        raise
+    except Exception as e:
+        logger.error(f"生成行业分析报告失败: {str(e)}")
+        raise HTTPException(status_code=500, detail="生成行业分析报告失败")
